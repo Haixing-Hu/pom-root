@@ -53,7 +53,7 @@
 
     <!-- Version numbers of my projects -->
     <pom-root.version>1.0.0</pom-root.version>
-    <haixing-commons.version>1.0.0</haixing-commons.version>
+    <haixing-commons.version>1.1.0-SNAPSHORT</haixing-commons.version>
     <ilibrary.version>0.0.2-SNAPSHORT</ilibrary.version>
 
     <!-- Version numbers of the maven plugins -->

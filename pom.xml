@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.haixing_hu</groupId>
+  <groupId>com.github.haixinghu</groupId>
   <artifactId>pom-root</artifactId>
   <packaging>pom</packaging>
   <version>1.0.0</version>
@@ -53,8 +53,9 @@
 
     <!-- Version numbers of my projects -->
     <pom-root.version>1.0.0</pom-root.version>
-    <haixing-commons.version>1.1.0-SNAPSHORT</haixing-commons.version>
-    <ilibrary.version>0.0.2-SNAPSHORT</ilibrary.version>
+    <commons.version>1.2.0-SNAPSHORT</commons.version>
+    <csl-proc.version>0.1.0-SNATSHORT</csl-proc.version>
+    <ilibrary.version>0.1.0-SNAPSHORT</ilibrary.version>
 
     <!-- Version numbers of the maven plugins -->
     <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>

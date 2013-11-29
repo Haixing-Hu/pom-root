@@ -96,7 +96,7 @@
     <derby.version>10.6.1.0</derby.version>
     <httpcore.version>4.1.2</httpcore.version>
     <httpclient.version>4.1.2</httpclient.version>
-    <simple-xml.version>2.3.6</simple-xml.version>
+    <simple-xml.version>2.7.1</simple-xml.version>
     <google.collections.version>1.0</google.collections.version>
     <log4j.version>1.2.14</log4j.version>
     <jsr305.version>1.3.9</jsr305.version>

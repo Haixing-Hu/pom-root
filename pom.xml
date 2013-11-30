@@ -77,6 +77,7 @@
 
     <!-- Version numbers of the 3rd part components -->
     <junit.version>4.8.2</junit.version>
+    <xmlunit.version>1.5</xmlunit.version>
     <mockito.version>1.8.5</mockito.version>
     <commons.logging.version>1.1.1</commons.logging.version>
     <commons.logging.api.version>1.1</commons.logging.api.version>
@@ -93,6 +94,7 @@
     <commons.fileupload.version>1.2.2</commons.fileupload.version>
     <commons.compress.version>1.4.1</commons.compress.version>
 
+    <joda-time.version>2.3</joda-time.version>
     <derby.version>10.6.1.0</derby.version>
     <httpcore.version>4.1.2</httpcore.version>
     <httpclient.version>4.1.2</httpclient.version>
@@ -326,11 +328,13 @@
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>${junit.version}</version>
-        <!-- NOTE:
-             The junit must be in compile scope, since the haixing-commons component 
-             provides some utility functions for junit classes.
-        -->
-        <scope>compile</scope>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>xmlunit</groupId>
+        <artifactId>xmlunit</artifactId>
+        <version>${xmlunit.version}</version>
+        <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.mockito</groupId>
@@ -433,6 +437,13 @@
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-email</artifactId>
         <version>${commons.email.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>${joda-time.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>
@@ -1015,10 +1026,6 @@
 
   <!-- Components depended by all projects -->
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-    </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>

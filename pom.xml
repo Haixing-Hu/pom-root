@@ -53,7 +53,7 @@
 
 		<!-- Version numbers of my projects -->
 		<pom-root.version>1.0.0</pom-root.version>
-		<java-commons.version>1.2.0-SNAPSHORT</java-commons.version>
+		<java-commons.version>1.2.0</java-commons.version>
 		<swt-widgets.version>1.0.0-SNAPSHORT</swt-widgets.version>
 		<csl-proc.version>0.1.0-SNATSHORT</csl-proc.version>
 		<ilibrary.version>0.1.0-SNAPSHORT</ilibrary.version>
@@ -356,7 +356,11 @@
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>${junit.version}</version>
-				<scope>test</scope>
+				<!-- The JUnit package is defined to be a compile time package,
+				since the java-commons project provides some utility functions
+				for JUnit, and thus it cannot pass the compiling until the 
+				JUnit is a compile time dependency. -->
+				<scope>compile</scope>
 			</dependency>
 			<dependency>
 				<groupId>xmlunit</groupId>

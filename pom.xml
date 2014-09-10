@@ -86,6 +86,7 @@
 		<commons.lang.version>2.6</commons.lang.version>
 		<commons.primitives.version>1.0</commons.primitives.version>
 		<commons.beanutils.version>1.8.3</commons.beanutils.version>
+		<commons.configuration.version>1.10</commons.configuration.version>
 		<commons.codec.version>1.7</commons.codec.version>
 		<commons.collections.version>3.2.1</commons.collections.version>
 		<commons.net.version>2.1</commons.net.version>
@@ -329,16 +330,23 @@
 		<dependencies>
 			<!-- Components developped by me -->
 			<dependency>
-				<groupId>com.github.haixing-hu</groupId>
+				<groupId>com.github.haixing_hu</groupId>
 				<artifactId>java-commons</artifactId>
 				<version>${java-commons.version}</version>
 				<type>jar</type>
 				<scope>compile</scope>
-			</dependency>
+			</dependency>			
 			<dependency>
-				<groupId>com.github.haixing-hu</groupId>
+				<groupId>com.github.haixing_hu</groupId>
 				<artifactId>swt-widgets</artifactId>
 				<version>${swt-widgets.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.github.haixing_hu</groupId>
+				<artifactId>csl-proc</artifactId>
+				<version>${csl-proc.version}</version>
 				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>
@@ -1054,9 +1062,13 @@
 	<!-- Components depended by all projects -->
 	<dependencies>
 		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>xmlunit</groupId>
+			<artifactId>xmlunit</artifactId>
+		</dependency>					
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>

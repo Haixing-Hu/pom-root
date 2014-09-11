@@ -375,13 +375,6 @@
 				<scope>test</scope>
 			</dependency>
 			<dependency>
-				<groupId>org.simpleframework</groupId>
-				<artifactId>simple-xml</artifactId>
-				<version>${simple-xml.version}</version>
-				<type>jar</type>
-				<scope>compile</scope>
-			</dependency>
-			<dependency>
 				<groupId>com.google.code.findbugs</groupId>
 				<artifactId>jsr305</artifactId>
 				<version>${jsr305.version}</version>
@@ -395,6 +388,13 @@
 				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.simpleframework</groupId>
+				<artifactId>simple-xml</artifactId>
+				<version>${simple-xml.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>			
 			<dependency>
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>

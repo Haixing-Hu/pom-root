@@ -39,7 +39,7 @@
 		<repository>
 			<id>swt-repo</id>
 			<name>SWT Repository</name>
-			<url>http://swt-repo.googlecode.com/svn/repo/</url>
+			<url>https://swt-repo.googlecode.com/svn/repo/</url>
 		</repository>
 	</repositories>
 
@@ -53,7 +53,7 @@
 
 		<!-- Version numbers of my projects -->
 		<pom-root.version>1.0.0</pom-root.version>
-		<java-commons.version>1.2.1</java-commons.version>
+		<java-commons.version>1.2.2</java-commons.version>
 		<swt-widgets.version>1.0.0-SNAPSHORT</swt-widgets.version>
 		<csl-proc.version>0.1.0-SNATSHORT</csl-proc.version>
 		<ilibrary.version>0.1.0-SNAPSHORT</ilibrary.version>
@@ -138,8 +138,13 @@
 		<jta.version>1.1</jta.version>
 		<servlet-api.version>2.5</servlet-api.version>
 		<jsp.version>2.1</jsp.version>
-		<swt.version>4.3</swt.version>
+		<equinox.version>3.6.100.v20120522-1841</equinox.version>				
+		<osgi.version>3.8.0.v20120529-1548</osgi.version>		
+		<swt.version>4.4</swt.version>
+		<draw2d.version>3.7.2</draw2d.version>
+		<gef.version>3.7.2</gef.version>
 		<jface.version>3.8.0.v20120521-2329</jface.version>
+		<eclipse-workbench.version>3.7.1.v20120104-1859</eclipse-workbench.version>
 	</properties>
 
 	<profiles>
@@ -1032,6 +1037,20 @@
 				<type>jar</type>
 				<scope>runtime</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.eclipse.osgi</groupId>
+				<artifactId>org.eclipse.osgi</artifactId>
+				<version>${osgi.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.equinox</groupId>
+				<artifactId>org.eclipse.equinox.common</artifactId>
+				<version>${equinox.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
 			<!-- GUI frameworks -->
 			<dependency>
 				<groupId>org.eclipse.swt</groupId>
@@ -1044,6 +1063,27 @@
 				<groupId>org.eclipse.jface</groupId>
 				<artifactId>org.eclipse.jface</artifactId>
 				<version>${jface.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.draw2d</groupId>
+				<artifactId>org.eclipse.draw2d</artifactId>
+				<version>${draw2d.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>			
+			<dependency>
+				<groupId>org.eclipse.gef</groupId>
+				<artifactId>org.eclipse.gef</artifactId>
+				<version>${gef.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.ui</groupId>
+				<artifactId>org.eclipse.ui.workbench</artifactId>
+				<version>${eclipse-workbench.version}</version>
 				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>

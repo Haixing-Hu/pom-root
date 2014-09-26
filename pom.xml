@@ -54,7 +54,7 @@
 		<!-- Version numbers of my projects -->
 		<pom-root.version>1.0.0</pom-root.version>
 		<java-commons.version>1.2.2</java-commons.version>
-		<swt-widgets.version>1.0.0-SNAPSHORT</swt-widgets.version>
+		<swt-widgets.version>1.0.0</swt-widgets.version>
 		<csl-proc.version>0.1.0-SNATSHORT</csl-proc.version>
 		<ilibrary.version>0.1.0-SNAPSHORT</ilibrary.version>
 

@@ -46,8 +46,9 @@
 	<properties>
 
 		<!-- General configuration constants -->
-		<jdk.version>1.7</jdk.version>
+		<jdk.version>1.8</jdk.version>
 		<jdk.javadoc.link>http://download.oracle.com/javase/7/docs/api/</jdk.javadoc.link>
+		<javafx.version>2.2</javafx.version>
 		<project.encoding>UTF-8</project.encoding>
 		<project.url>https://github.com/Haixing-Hu</project.url>
 

@@ -146,6 +146,7 @@
 		<gef.version>3.7.2</gef.version>
 		<jface.version>3.8.0.v20120521-2329</jface.version>
 		<eclipse-workbench.version>3.7.1.v20120104-1859</eclipse-workbench.version>
+		<controlsfx.version>8.0.6</controlsfx.version>
 	</properties>
 
 	<profiles>
@@ -1086,6 +1087,13 @@
 				<artifactId>org.eclipse.ui.workbench</artifactId>
 				<version>${eclipse-workbench.version}</version>
 				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+    			<groupId>org.controlsfx</groupId>
+    			<artifactId>controlsfx</artifactId>
+    			<version>${controlsfx.version}</version>
+    			<type>jar</type>
 				<scope>compile</scope>
 			</dependency>
 			<!-- Container-provided dependencies -->

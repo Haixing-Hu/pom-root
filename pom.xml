@@ -57,6 +57,7 @@
 		<java-commons.version>1.2.2</java-commons.version>
 		<swt-widgets.version>1.0.1</swt-widgets.version>
 		<csl-proc.version>0.1.0-SNATSHORT</csl-proc.version>
+		<javafx-widgets.version>1.0.0-SNAPSHOT</javafx-widgets.version>
 		<ilibrary.version>0.1.0-SNAPSHORT</ilibrary.version>
 
 		<!-- Version numbers of the maven plugins -->
@@ -68,6 +69,7 @@
 		<maven-resources-plugin.version>2.4.3</maven-resources-plugin.version>
 		<maven-jetty-plugin.version>6.1.24</maven-jetty-plugin.version>
 		<maven-war-plugin.version>2.1.1</maven-war-plugin.version>
+		<javafx-maven-plugin.version>2.0</javafx-maven-plugin.version>
 		<gwt-maven-plugin.version>1.2</gwt-maven-plugin.version>
 		<vaadin-maven-plugin.version>1.0.0</vaadin-maven-plugin.version>
 		<cobertura-maven-plugin.version>2.4</cobertura-maven-plugin.version>
@@ -139,8 +141,8 @@
 		<jta.version>1.1</jta.version>
 		<servlet-api.version>2.5</servlet-api.version>
 		<jsp.version>2.1</jsp.version>
-		<equinox.version>3.6.100.v20120522-1841</equinox.version>				
-		<osgi.version>3.8.0.v20120529-1548</osgi.version>		
+		<equinox.version>3.6.100.v20120522-1841</equinox.version>
+		<osgi.version>3.8.0.v20120529-1548</osgi.version>
 		<swt.version>4.4</swt.version>
 		<draw2d.version>3.7.2</draw2d.version>
 		<gef.version>3.7.2</gef.version>
@@ -279,19 +281,16 @@
 			<!-- <artifactId>cobertura-maven-plugin</artifactId> -->
 			<!-- <version>${cobertura-maven-plugin.version}</version> -->
 			<!-- </plugin> -->
-
-			<!-- <plugin> <groupId>org.eclipse.m2e</groupId> <artifactId>lifecycle-mapping</artifactId> 
-				<version>1.0.0</version> <configuration> <lifecycleMappingMetadata> <pluginExecutions> 
-				<pluginExecution> <pluginExecutionFilter> <groupId>org.apache.maven.plugins</groupId> 
-				<artifactId>maven-dependency-plugin</artifactId> <versionRange>[2.0,)</versionRange> 
-				<goals> <goal>copy-dependencies</goal> </goals> </pluginExecutionFilter> 
-				<action> <execute /> </action> </pluginExecution> </pluginExecutions> </lifecycleMappingMetadata> 
-				</configuration> </plugin> -->
 		</plugins>
 
 		<!-- Fixes a bug of m2e -->
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>com.zenjava</groupId>
+    				<artifactId>javafx-maven-plugin</artifactId>
+    				<version>${javafx-maven-plugin.version}</version>
+				</plugin>
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -320,18 +319,6 @@
 		</pluginManagement>
 	</build>
 
-	<!-- Report goals used by all projects -->
-	<!-- <reporting> -->
-	<!-- <plugins> -->
-	<!-- <plugin> -->
-	<!-- <groupId>org.codehaus.mojo</groupId> -->
-	<!-- <artifactId>cobertura-maven-plugin</artifactId> -->
-	<!-- <version>${cobertura-maven-plugin.version}</version> -->
-	<!-- </plugin> -->
-	<!-- </plugins> -->
-	<!-- </reporting> -->
-
-
 	<!-- Configuration of dependencies -->
 	<dependencyManagement>
 		<dependencies>
@@ -342,7 +329,7 @@
 				<version>${java-commons.version}</version>
 				<type>jar</type>
 				<scope>compile</scope>
-			</dependency>			
+			</dependency>
 			<dependency>
 				<groupId>com.github.haixing_hu</groupId>
 				<artifactId>swt-widgets</artifactId>
@@ -357,6 +344,20 @@
 				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>
+			<dependency>
+				<groupId>com.github.haixing_hu</groupId>
+				<artifactId>javafx-widgets</artifactId>
+				<version>${javafx-widgets.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.github.haixing_hu</groupId>
+				<artifactId>ilibrary</artifactId>
+				<version>${ilibrary.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
 
 			<!-- 3part components -->
 			<dependency>
@@ -365,7 +366,7 @@
 				<version>${junit.version}</version>
 				<!-- The JUnit package is defined to be a compile time package,
 				since the java-commons project provides some utility functions
-				for JUnit, and thus it cannot pass the compiling until the 
+				for JUnit, and thus it cannot pass the compiling until the
 				JUnit is a compile time dependency. -->
 				<scope>compile</scope>
 			</dependency>
@@ -401,7 +402,7 @@
 				<version>${simple-xml.version}</version>
 				<type>jar</type>
 				<scope>compile</scope>
-			</dependency>			
+			</dependency>
 			<dependency>
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>
@@ -450,7 +451,7 @@
 				<version>${commons.configuration.version}</version>
 				<type>jar</type>
 				<scope>compile</scope>
-			</dependency>			
+			</dependency>
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
@@ -1074,7 +1075,7 @@
 				<version>${draw2d.version}</version>
 				<type>jar</type>
 				<scope>compile</scope>
-			</dependency>			
+			</dependency>
 			<dependency>
 				<groupId>org.eclipse.gef</groupId>
 				<artifactId>org.eclipse.gef</artifactId>
@@ -1121,7 +1122,7 @@
 		<dependency>
 			<groupId>xmlunit</groupId>
 			<artifactId>xmlunit</artifactId>
-		</dependency>					
+		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -1130,8 +1131,9 @@
 			<groupId>com.google.code.findbugs</groupId>
 			<artifactId>jsr305</artifactId>
 		</dependency>
-		<!-- NOTE: The following trick is used to get ride of commons-logging. 
-			We will use jcl-over-slf4j to replace commons-logging. See: http://day-to-day-stuff.blogspot.com/2007/10/announcement-version-99-does-not-exist.html -->
+		<!-- NOTE: The following trick is used to get ride of commons-logging.
+			We will use jcl-over-slf4j to replace commons-logging.
+			See: http://day-to-day-stuff.blogspot.com/2007/10/announcement-version-99-does-not-exist.html -->
 		<!-- <dependency> -->
 		<!-- <groupId>commons-logging</groupId> -->
 		<!-- <artifactId>commons-logging</artifactId> -->

@@ -19,7 +19,7 @@
 		<system>Github</system>
 		<url>https://github.com/Haixing-Hu/</url>
 	</issueManagement>
-
+<!-- 
 	<repositories>
 		<repository>
 			<id>com.springsource.repository.bundles.release</id>
@@ -40,8 +40,9 @@
 			<id>swt-repo</id>
 			<name>SWT Repository</name>
 			<url>https://swt-repo.googlecode.com/svn/repo/</url>
-		</repository>
+		</repository> 
 	</repositories>
+-->
 
 	<properties>
 

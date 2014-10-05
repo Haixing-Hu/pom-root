@@ -19,7 +19,7 @@
 		<system>Github</system>
 		<url>https://github.com/Haixing-Hu/</url>
 	</issueManagement>
-<!-- 
+<!--
 	<repositories>
 		<repository>
 			<id>com.springsource.repository.bundles.release</id>
@@ -40,7 +40,7 @@
 			<id>swt-repo</id>
 			<name>SWT Repository</name>
 			<url>https://swt-repo.googlecode.com/svn/repo/</url>
-		</repository> 
+		</repository>
 	</repositories>
 -->
 
@@ -59,6 +59,7 @@
 		<swt-widgets.version>1.0.1</swt-widgets.version>
 		<csl-proc.version>0.1.0-SNATSHORT</csl-proc.version>
 		<javafx-widgets.version>1.0.1-SNAPSHOT</javafx-widgets.version>
+		<criteria.version>1.0.0-SNAPSHORT</criteria.version>
 		<ilibrary.version>0.1.0-SNAPSHORT</ilibrary.version>
 
 		<!-- Version numbers of the maven plugins -->
@@ -349,6 +350,13 @@
 				<groupId>com.github.haixing_hu</groupId>
 				<artifactId>javafx-widgets</artifactId>
 				<version>${javafx-widgets.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.github.haixing_hu</groupId>
+				<artifactId>criteria</artifactId>
+				<version>${criteria.version}</version>
 				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>

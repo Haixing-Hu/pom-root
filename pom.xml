@@ -19,30 +19,15 @@
 		<system>Github</system>
 		<url>https://github.com/Haixing-Hu/</url>
 	</issueManagement>
-<!--
-	<repositories>
-		<repository>
-			<id>com.springsource.repository.bundles.release</id>
-			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
-			<url>http://repository.springsource.com/maven/bundles/release</url>
-		</repository>
-		<repository>
-			<id>com.springsource.repository.bundles.external</id>
-			<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
-			<url>http://repository.springsource.com/maven/bundles/external</url>
-		</repository>
-		<repository>
-			<id>EclipseLink</id>
-			<name>EclipseLink Repository</name>
-			<url>http://download.eclipse.org/rt/eclipselink/maven.repo</url>
-		</repository>
-		<repository>
-			<id>swt-repo</id>
-			<name>SWT Repository</name>
-			<url>https://swt-repo.googlecode.com/svn/repo/</url>
-		</repository>
-	</repositories>
--->
+	<!-- <repositories> <repository> <id>com.springsource.repository.bundles.release</id>
+		<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
+		<url>http://repository.springsource.com/maven/bundles/release</url> </repository>
+		<repository> <id>com.springsource.repository.bundles.external</id> <name>SpringSource
+		Enterprise Bundle Repository - External Bundle Releases</name> <url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository> <repository> <id>EclipseLink</id> <name>EclipseLink Repository</name>
+		<url>http://download.eclipse.org/rt/eclipselink/maven.repo</url> </repository>
+		<repository> <id>swt-repo</id> <name>SWT Repository</name> <url>https://swt-repo.googlecode.com/svn/repo/</url>
+		</repository> </repositories> -->
 
 	<properties>
 
@@ -55,11 +40,11 @@
 
 		<!-- Version numbers of my projects -->
 		<pom-root.version>1.0.0</pom-root.version>
-		<java-commons.version>1.2.2</java-commons.version>
+		<java-commons.version>1.2.3</java-commons.version>
 		<swt-widgets.version>1.0.1</swt-widgets.version>
 		<csl-proc.version>0.1.0-SNATSHORT</csl-proc.version>
 		<javafx-widgets.version>1.0.1-SNAPSHOT</javafx-widgets.version>
-		<criteria.version>1.0.0-SNAPSHORT</criteria.version>
+		<criteria.version>1.0.0</criteria.version>
 		<ilibrary.version>0.1.0-SNAPSHORT</ilibrary.version>
 
 		<!-- Version numbers of the maven plugins -->
@@ -76,6 +61,7 @@
 		<vaadin-maven-plugin.version>1.0.0</vaadin-maven-plugin.version>
 		<cobertura-maven-plugin.version>2.4</cobertura-maven-plugin.version>
 		<cal10n-maven-plugin.version>0.7.4</cal10n-maven-plugin.version>
+		<antlr4-maven-plugin.version>4.3</antlr4-maven-plugin.version>
 
 		<!-- Version numbers for the logging utilities -->
 		<slf4j.version>1.7.2</slf4j.version>
@@ -101,6 +87,7 @@
 		<commons.fileupload.version>1.2.2</commons.fileupload.version>
 		<commons.compress.version>1.4.1</commons.compress.version>
 
+		<antlr4.version>4.3</antlr4.version>
 		<joda-time.version>2.3</joda-time.version>
 		<derby.version>10.6.1.0</derby.version>
 		<httpcore.version>4.1.2</httpcore.version>
@@ -290,8 +277,8 @@
 			<plugins>
 				<plugin>
 					<groupId>com.zenjava</groupId>
-    				<artifactId>javafx-maven-plugin</artifactId>
-    				<version>${javafx-maven-plugin.version}</version>
+					<artifactId>javafx-maven-plugin</artifactId>
+					<version>${javafx-maven-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
@@ -316,6 +303,23 @@
 							</pluginExecutions>
 						</lifecycleMappingMetadata>
 					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.antlr</groupId>
+					<artifactId>antlr4-maven-plugin</artifactId>
+					<version>${antlr4-maven-plugin.version}</version>
+					<configuration>
+						<outputDirectory>src/main/java</outputDirectory>
+						<visitor>true</visitor>
+					</configuration>
+					<executions>
+						<execution>
+							<id>antlr</id>
+							<goals>
+								<goal>antlr4</goal>
+							</goals>
+						</execution>
+					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -373,10 +377,9 @@
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>${junit.version}</version>
-				<!-- The JUnit package is defined to be a compile time package,
-				since the java-commons project provides some utility functions
-				for JUnit, and thus it cannot pass the compiling until the
-				JUnit is a compile time dependency. -->
+				<!-- The JUnit package is defined to be a compile time package, since
+					the java-commons project provides some utility functions for JUnit, and thus
+					it cannot pass the compiling until the JUnit is a compile time dependency. -->
 				<scope>compile</scope>
 			</dependency>
 			<dependency>
@@ -493,6 +496,13 @@
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-email</artifactId>
 				<version>${commons.email.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.antlr</groupId>
+				<artifactId>antlr4-runtime</artifactId>
+				<version>${antlr4.version}</version>
 				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>
@@ -1100,10 +1110,10 @@
 				<scope>compile</scope>
 			</dependency>
 			<dependency>
-    			<groupId>org.controlsfx</groupId>
-    			<artifactId>controlsfx</artifactId>
-    			<version>${controlsfx.version}</version>
-    			<type>jar</type>
+				<groupId>org.controlsfx</groupId>
+				<artifactId>controlsfx</artifactId>
+				<version>${controlsfx.version}</version>
+				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>
 			<!-- Container-provided dependencies -->
@@ -1141,8 +1151,7 @@
 			<artifactId>jsr305</artifactId>
 		</dependency>
 		<!-- NOTE: The following trick is used to get ride of commons-logging.
-			We will use jcl-over-slf4j to replace commons-logging.
-			See: http://day-to-day-stuff.blogspot.com/2007/10/announcement-version-99-does-not-exist.html -->
+			We will use jcl-over-slf4j to replace commons-logging. See: http://day-to-day-stuff.blogspot.com/2007/10/announcement-version-99-does-not-exist.html -->
 		<!-- <dependency> -->
 		<!-- <groupId>commons-logging</groupId> -->
 		<!-- <artifactId>commons-logging</artifactId> -->

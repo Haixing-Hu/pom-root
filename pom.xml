@@ -43,7 +43,7 @@
 		<java-commons.version>1.2.3</java-commons.version>
 		<swt-widgets.version>1.0.1</swt-widgets.version>
 		<csl-proc.version>0.1.0-SNATSHORT</csl-proc.version>
-		<javafx-widgets.version>1.0.1-SNAPSHOT</javafx-widgets.version>
+		<javafx-widgets.version>1.0.2-SNAPSHOT</javafx-widgets.version>
 		<criteria.version>1.0.0</criteria.version>
 		<ilibrary.version>0.1.0-SNAPSHORT</ilibrary.version>
 

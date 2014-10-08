@@ -45,6 +45,7 @@
 		<csl-proc.version>0.1.0-SNATSHORT</csl-proc.version>
 		<javafx-widgets.version>1.0.2-SNAPSHOT</javafx-widgets.version>
 		<criteria.version>1.0.0</criteria.version>
+		<data-access.version>1.0.0-SNAPSHOT</data-access.version>
 		<ilibrary.version>0.1.0-SNAPSHORT</ilibrary.version>
 
 		<!-- Version numbers of the maven plugins -->
@@ -361,6 +362,13 @@
 				<groupId>com.github.haixing_hu</groupId>
 				<artifactId>criteria</artifactId>
 				<version>${criteria.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.github.haixing_hu</groupId>
+				<artifactId>data-access</artifactId>
+				<version>${data-access.version}</version>
 				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>

@@ -61,8 +61,10 @@
 		<cal10n-maven-plugin.version>0.7.4</cal10n-maven-plugin.version>
 		<antlr4-maven-plugin.version>4.3</antlr4-maven-plugin.version>
 		<findbugs-maven-plugin.version>3.0.0</findbugs-maven-plugin.version>
+		<maven-pmd-plugin.version>3.2</maven-pmd-plugin.version>
 		<maven-checkstyle-plugin.version>2.13</maven-checkstyle-plugin.version>
 		<emma-maven-plugin.version>1.0-alpha-2</emma-maven-plugin.version>
+		<jacoco-maven-plugin.version>0.7.3-SNAPSHOT</jacoco-maven-plugin.version>
 		<taglist-maven-plugin.version>2.4</taglist-maven-plugin.version>
 		<dashboard-maven-plugin.version>1.0.0-beta-1</dashboard-maven-plugin.version>
 
@@ -200,14 +202,14 @@
 			</properties>
 		</profile>
 	</profiles>
-
+<!--
 	<pluginRepositories>
 		<pluginRepository>
 			<id>Codehaus repository</id>
 			<url>http://repository.codehaus.org/</url>
 		</pluginRepository>
 	</pluginRepositories>
-
+ -->
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -304,6 +306,18 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>cobertura-maven-plugin</artifactId>
 					<version>${cobertura-maven-plugin.version}</version>
+				</plugin>
+				<!-- configuration for the jacoco plugin -->
+				<plugin>
+  					<groupId>org.jacoco</groupId>
+  					<artifactId>jacoco-maven-plugin</artifactId>
+  					<version>${jacoco-maven-plugin.version}</version>
+				</plugin>
+				<!-- configuration for the PMD plugin -->
+				<plugin>
+  					<groupId>org.apache.maven.plugins</groupId>
+        			<artifactId>maven-pmd-plugin</artifactId>
+  					<version>${maven-pmd-plugin.version}</version>
 				</plugin>
 				<!-- configuration for the taglist plugin -->
         		<plugin>
@@ -406,12 +420,10 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
 			</plugin>
-			<plugin>
+<!-- 			<plugin>
         		<groupId>org.codehaus.mojo</groupId>
         		<artifactId>findbugs-maven-plugin</artifactId>
-      		</plugin>
-
-
+      		</plugin> -->
 		</plugins>
 	</build>
 
@@ -421,25 +433,26 @@
         		<groupId>org.codehaus.mojo</groupId>
         		<artifactId>findbugs-maven-plugin</artifactId>
       		</plugin>
+	<!-- 		<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+    			<artifactId>maven-pmd-plugin</artifactId>
+			</plugin> -->
       		<plugin>
           		<groupId>org.apache.maven.plugins</groupId>
           		<artifactId>maven-checkstyle-plugin</artifactId>
-          <!-- 		<reportSets>
-        			<reportSet>
-          				<reports>
-            				<report>checkstyle</report>
-          				</reports>
-        			</reportSet>
-      			</reportSets> -->
         	</plugin>
 <!--         	<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>emma-maven-plugin</artifactId>
 			</plugin> -->
-			<plugin>
+<!-- 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
-			</plugin>
+			</plugin> -->
+<!-- 			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+			</plugin> -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>taglist-maven-plugin</artifactId>

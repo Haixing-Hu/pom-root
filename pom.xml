@@ -57,7 +57,7 @@
 		<maven-jetty-plugin.version>6.1.24</maven-jetty-plugin.version>
 		<maven-war-plugin.version>2.1.1</maven-war-plugin.version>
 		<javafx-maven-plugin.version>2.0</javafx-maven-plugin.version>
-		<cobertura-maven-plugin.version>2.4</cobertura-maven-plugin.version>
+		<cobertura-maven-plugin.version>2.6</cobertura-maven-plugin.version>
 		<cal10n-maven-plugin.version>0.7.4</cal10n-maven-plugin.version>
 		<antlr4-maven-plugin.version>4.3</antlr4-maven-plugin.version>
 		<findbugs-maven-plugin.version>3.0.0</findbugs-maven-plugin.version>

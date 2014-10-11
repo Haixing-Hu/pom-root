@@ -39,11 +39,11 @@
 
     <!-- Version numbers of my projects -->
     <pom-root.version>1.0.0</pom-root.version>
-    <java-commons.version>1.3.0</java-commons.version>
+    <java-commons.version>1.3.2-SNAPSHOT</java-commons.version>
     <swt-widgets.version>1.0.1</swt-widgets.version>
-    <csl-proc.version>0.1.0-SNATSHORT</csl-proc.version>
+    <csl-proc.version>0.1.0-SNAPSHORT</csl-proc.version>
     <javafx-widgets.version>1.0.2-SNAPSHOT</javafx-widgets.version>
-    <criteria.version>1.0.1</criteria.version>
+    <criteria.version>1.0.2-SNAPSHOT</criteria.version>
     <data-access.version>1.0.0-SNAPSHOT</data-access.version>
     <ilibrary.version>0.1.0-SNAPSHORT</ilibrary.version>
 
@@ -87,6 +87,7 @@
     <commons.primitives.version>1.0</commons.primitives.version>
     <commons.beanutils.version>1.8.3</commons.beanutils.version>
     <commons.configuration.version>1.10</commons.configuration.version>
+    <commons.configuration2.version>2.0-alpha1</commons.configuration2.version>
     <commons.codec.version>1.7</commons.codec.version>
     <commons.collections.version>3.2.1</commons.collections.version>
     <commons.net.version>2.1</commons.net.version>
@@ -333,15 +334,16 @@
           </configuration>
         </plugin>
         <!-- configuration of the check style plugin -->
+        <!-- 
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
           <version>${maven-checkstyle-plugin.version}</version>
           <configuration>
-            <!-- specify a Checkstyle Checker configuration -->
-            <configLocation>config/sun_checks.xml</configLocation>
+            <configLocation>checkstyle_rules.xml</configLocation>
           </configuration>
         </plugin>
+        -->
         <!-- configuration for the emma plugin -->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -494,9 +496,7 @@
                   </pluginExecutionFilter>
                   <action>
                     <!-- m2e doesn't know what to do with jacoco, let's ignore it 
-                      or annoying error markers appear see 
-                      http://wiki.eclipse.org/M2E_plugin_execution_not_covered 
-                    -->
+                      or annoying error markers appear see http://wiki.eclipse.org/M2E_plugin_execution_not_covered -->
                     <ignore></ignore>
                   </action>
                 </pluginExecution>
@@ -562,10 +562,12 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
       </plugin>
+      <!-- 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
       </plugin>
+      -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>taglist-maven-plugin</artifactId>
@@ -746,6 +748,13 @@
         <groupId>commons-configuration</groupId>
         <artifactId>commons-configuration</artifactId>
         <version>${commons.configuration.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-configuration2</artifactId>
+        <version>${commons-configuration2.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>

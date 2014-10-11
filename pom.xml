@@ -73,38 +73,49 @@
     <dashboard-maven-plugin.version>1.0.0-beta-1</dashboard-maven-plugin.version>
 
     <!-- Version numbers for the logging utilities -->
-    <slf4j.version>1.7.2</slf4j.version>
+    <slf4j.version>1.7.7</slf4j.version>
     <logback.version>1.0.7</logback.version>
 
     <!-- Version numbers of the 3rd part components -->
-    <junit.version>4.8.2</junit.version>
+    <junit.version>4.11</junit.version>
+    <easymock.version>3.2</easymock.version>
     <xmlunit.version>1.5</xmlunit.version>
     <mockito.version>1.8.5</mockito.version>
-    <commons.logging.version>1.1.1</commons.logging.version>
-    <commons.logging.api.version>1.1</commons.logging.api.version>
-    <commons.io.version>2.4</commons.io.version>
-    <commons.lang.version>2.6</commons.lang.version>
-    <commons.primitives.version>1.0</commons.primitives.version>
-    <commons.beanutils.version>1.8.3</commons.beanutils.version>
-    <commons.configuration.version>1.10</commons.configuration.version>
-    <commons.configuration2.version>2.0-alpha1</commons.configuration2.version>
-    <commons.codec.version>1.7</commons.codec.version>
-    <commons.collections.version>3.2.1</commons.collections.version>
-    <commons.net.version>2.1</commons.net.version>
-    <commons.dbcp.version>1.4</commons.dbcp.version>
-    <commons.pool.version>20030825.183949</commons.pool.version>
-    <commons.email.version>1.2</commons.email.version>
-    <commons.fileupload.version>1.2.2</commons.fileupload.version>
-    <commons.compress.version>1.4.1</commons.compress.version>
 
-    <antlr4.version>4.3</antlr4.version>
-    <joda-time.version>2.3</joda-time.version>
-    <derby.version>10.6.1.0</derby.version>
-    <httpcore.version>4.1.2</httpcore.version>
-    <httpclient.version>4.1.2</httpclient.version>
-    <simple-xml.version>2.7.1</simple-xml.version>
+    <commons.lang.version>3.3.2</commons.lang.version>
+    <commons.io.version>2.4</commons.io.version>
+    <commons.logging.version>1.2</commons.logging.version>
+    <commons.logging.api.version>1.2</commons.logging.api.version>
+    <commons.primitives.version>1.0</commons.primitives.version>
+    <commons.collections.version>4.0</commons.collections.version>
+    <commons.beanutils.version>1.9.2</commons.beanutils.version>
+    <commons.configuration.version>2.0-alpha1</commons.configuration.version>
+    <commons.codec.version>1.9</commons.codec.version>
+    <commons.net.version>3.3</commons.net.version>
+    <commons.dbutils.version>1.6</commons.dbutils.version>
+    <commons.dbcp.version>2.0.1</commons.dbcp.version>
+    <commons.pool.version>2.2</commons.pool.version>
+    <commons.email.version>1.3.3</commons.email.version>
+    <commons.fileupload.version>1.3.1</commons.fileupload.version>
+    <commons.compress.version>1.9</commons.compress.version>
+    <commons.math.version>3.3</commons.math.version>
+    <commons.exec.version>1.2</commons.exec.version>
+    <commons.vfs.version>2.0</commons.vfs.version>
+    <commons.daemon.version>1.0.15</commons.daemon.version>
+    <commons.cli.version>1.2</commons.cli.version>
+    <commons.csv.version>1.0</commons.csv.version>
+    <commons.digester.version>3.2</commons.digester.version>
+    <commons.proxy.version>1.0</commons.proxy.version>
+    <commons.modeler.version>2.0.1</commons.modeler.version>
+    <commons.launcher.version>1.1</commons.launcher.version>
+    <httpcomponents.version>4.3.5</httpcomponents.version>
+
     <google.collections.version>1.0</google.collections.version>
-    <log4j.version>1.2.14</log4j.version>
+    <antlr.version>4.3</antlr.version>
+    <joda-time.version>2.5</joda-time.version>
+    <derby.version>10.6.1.0</derby.version>
+    
+    <log4j.version>2.0.2</log4j.version>
     <jsr305.version>1.3.9</jsr305.version>
     <jchardet.version>1.0</jchardet.version>
     <xerces.version>2.9.1</xerces.version>
@@ -118,7 +129,7 @@
     <je.version>4.0.103</je.version>
     <json-lib.version>2.4</json-lib.version>
     <json-org.version>20090211</json-org.version>
-    <spring.version>3.1.3.RELEASE</spring.version>
+    <spring.version>4.1.1.RELEASE</spring.version>
     <spring-dao.version>2.0.8</spring-dao.version>
     <aspectj.version>1.7.1</aspectj.version>
     <proxool.version>0.8.3</proxool.version>
@@ -126,9 +137,9 @@
     <c3p0.version>0.9.2-pre8</c3p0.version>
     <hibernate.version>4.1.8.Final</hibernate.version>
     <hibernate-jpa-2.version>1.0.1.Final</hibernate-jpa-2.version>
-    <mybatis.version>3.1.1</mybatis.version>
-    <mybatis-spring.version>1.1.1</mybatis-spring.version>
-    <struts.version>2.3.7</struts.version>
+    <mybatis.version>3.2.8</mybatis.version>
+    <mybatis-spring.version>1.2.2</mybatis-spring.version>
+    <struts.version>2.3.16.3</struts.version>
     <javassist.version>3.8.0.GA</javassist.version>
     <mysql-connector.version>5.1.22</mysql-connector.version>
     <ojdbc14.version>10.2.0.3.0</ojdbc14.version>
@@ -334,16 +345,9 @@
           </configuration>
         </plugin>
         <!-- configuration of the check style plugin -->
-        <!-- 
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>${maven-checkstyle-plugin.version}</version>
-          <configuration>
-            <configLocation>checkstyle_rules.xml</configLocation>
-          </configuration>
-        </plugin>
-        -->
+        <!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-checkstyle-plugin</artifactId> 
+          <version>${maven-checkstyle-plugin.version}</version> <configuration> <configLocation>checkstyle_rules.xml</configLocation> 
+          </configuration> </plugin> -->
         <!-- configuration for the emma plugin -->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -562,12 +566,8 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
       </plugin>
-      <!-- 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-      </plugin>
-      -->
+      <!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-checkstyle-plugin</artifactId> 
+        </plugin> -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>taglist-maven-plugin</artifactId>
@@ -670,6 +670,12 @@
         <scope>compile</scope>
       </dependency>
       <dependency>
+        <groupId>org.easymock</groupId>
+        <artifactId>easymock</artifactId>
+        <version>${easymock.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
         <groupId>xmlunit</groupId>
         <artifactId>xmlunit</artifactId>
         <version>${xmlunit.version}</version>
@@ -689,22 +695,15 @@
         <scope>compile</scope>
       </dependency>
       <dependency>
-        <groupId>log4j</groupId>
+        <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j</artifactId>
         <version>${log4j.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>
       <dependency>
-        <groupId>org.simpleframework</groupId>
-        <artifactId>simple-xml</artifactId>
-        <version>${simple-xml.version}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-      </dependency>
-      <dependency>
-        <groupId>commons-lang</groupId>
-        <artifactId>commons-lang</artifactId>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
         <version>${commons.lang.version}</version>
         <type>jar</type>
         <scope>compile</scope>
@@ -738,6 +737,13 @@
         <scope>compile</scope>
       </dependency>
       <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-collections4</artifactId>
+        <version>${commons.collections.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
         <groupId>commons-beanutils</groupId>
         <artifactId>commons-beanutils</artifactId>
         <version>${commons.beanutils.version}</version>
@@ -745,16 +751,9 @@
         <scope>compile</scope>
       </dependency>
       <dependency>
-        <groupId>commons-configuration</groupId>
-        <artifactId>commons-configuration</artifactId>
-        <version>${commons.configuration.version}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-      </dependency>
-      <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-configuration2</artifactId>
-        <version>${commons-configuration2.version}</version>
+        <version>${commons-configuration.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>
@@ -766,22 +765,29 @@
         <scope>compile</scope>
       </dependency>
       <dependency>
-        <groupId>commons-collections</groupId>
-        <artifactId>commons-collections</artifactId>
-        <version>${commons.collections.version}</version>
+        <groupId>commons-net</groupId>
+        <artifactId>commons-net</artifactId>
+        <version>${commons.net.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>
       <dependency>
-        <groupId>commons-dbcp</groupId>
-        <artifactId>commons-dbcp</artifactId>
+        <groupId>commons-dbutils</groupId>
+        <artifactId>commons-dbutils</artifactId>
+        <version>${commons.dbutils.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-dbcp2</artifactId>
         <version>${commons.dbcp.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>
       <dependency>
-        <groupId>commons-pool</groupId>
-        <artifactId>commons-pool</artifactId>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-pool2</artifactId>
         <version>${commons.pool.version}</version>
         <type>jar</type>
         <scope>compile</scope>
@@ -794,9 +800,108 @@
         <scope>compile</scope>
       </dependency>
       <dependency>
+        <groupId>commons-fileupload</groupId>
+        <artifactId>commons-fileupload</artifactId>
+        <version>${commons.fileupload.version}</version>
+          <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-compress</artifactId>
+        <version>${commons.compress.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-math3</artifactId>
+        <version>${commons.math.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-exec</artifactId>
+        <version>${commons.exec.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-vfs2</artifactId>
+        <version>${commons.vfs.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>commons-daemon</groupId>
+        <artifactId>commons-daemon</artifactId>
+        <version>${commons.daemon.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>commons-cli</groupId>
+        <artifactId>commons-cli</artifactId>
+        <version>${commons.cli.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-csv</artifactId>
+        <version>${commons.csv.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-digester3</artifactId>
+        <version>${commons.digester.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-proxy</artifactId>
+        <version>${commons.proxy.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>commons-modeler</groupId>
+        <artifactId>commons-modeler</artifactId>
+        <version>${commons.modeler.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>commons-launcher</groupId>
+        <artifactId>commons-launcher</artifactId>
+        <version>${commons.launcher.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpcore</artifactId>
+        <version>${httpcomponents.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>${httpcomponents.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
         <groupId>org.antlr</groupId>
         <artifactId>antlr4-runtime</artifactId>
-        <version>${antlr4.version}</version>
+        <version>${antlr.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>
@@ -813,21 +918,7 @@
         <version>${derby.version}</version>
         <type>jar</type>
         <scope>compile</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpcore</artifactId>
-        <version>${httpcore.version}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpclient</artifactId>
-        <version>${httpclient.version}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-      </dependency>
+      </dependency>      
       <dependency>
         <groupId>com.google.collections</groupId>
         <artifactId>google-collections</artifactId>

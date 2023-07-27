@@ -80,7 +80,7 @@
     <maven-assembly-plugin.version>2.6</maven-assembly-plugin.version>
     <httpcore.version>4.4.14</httpcore.version>
     <jbrowserdriver.version>1.1.1</jbrowserdriver.version>
-    <commons.text.version>1.9</commons.text.version>
+    <commons.text.version>1.10.0</commons.text.version>
     <hamcrest-matchers.version>1.0.1</hamcrest-matchers.version>
     <joda-time.version>2.10.10</joda-time.version>
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>

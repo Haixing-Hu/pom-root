@@ -562,8 +562,8 @@
         <scope>import</scope>
         <exclusions>
           <exclusion>
-            <artifactId>commons-logging</artifactId>
             <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -573,8 +573,8 @@
         <version>${spring-framework.version}</version>
         <exclusions>
           <exclusion>
-            <artifactId>commons-logging</artifactId>
             <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -584,8 +584,8 @@
         <version>${spring-framework.version}</version>
         <exclusions>
           <exclusion>
-            <artifactId>commons-logging</artifactId>
             <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -595,8 +595,8 @@
         <version>${spring-framework.version}</version>
         <exclusions>
           <exclusion>
-            <artifactId>commons-logging</artifactId>
             <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -607,8 +607,8 @@
         <scope>compile</scope>
         <exclusions>
           <exclusion>
-            <artifactId>commons-logging</artifactId>
             <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -620,8 +620,8 @@
         <scope>import</scope>
         <exclusions>
           <exclusion>
-            <artifactId>commons-logging</artifactId>
             <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -633,8 +633,8 @@
         <scope>import</scope>
         <exclusions>
           <exclusion>
-            <artifactId>commons-logging</artifactId>
             <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -646,8 +646,8 @@
         <scope>import</scope>
         <exclusions>
           <exclusion>
-            <artifactId>commons-logging</artifactId>
             <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -658,8 +658,8 @@
         <scope>compile</scope>
         <exclusions>
           <exclusion>
-            <artifactId>commons-logging</artifactId>
             <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -838,8 +838,8 @@
         <scope>compile</scope>
         <exclusions>
           <exclusion>
-            <artifactId>commons-logging</artifactId>
             <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -1671,12 +1671,12 @@
         <scope>compile</scope>
         <exclusions>
           <exclusion>
-            <artifactId>log4j</artifactId>
             <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
           </exclusion>
           <exclusion>
-            <artifactId>slf4j-log4j12</artifactId>
             <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -1879,8 +1879,8 @@
         <scope>test</scope>
         <exclusions>
           <exclusion>
-            <artifactId>hamcrest-core</artifactId>
             <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -2257,8 +2257,8 @@
         <scope>runtime</scope>
         <exclusions>
           <exclusion>
-            <artifactId>c3p0</artifactId>
             <groupId>c3p0</groupId>
+            <artifactId>c3p0</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -2740,11 +2740,13 @@
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
               <version>${checkstyle.version}</version>
+              <scope>provided</scope>
             </dependency>
             <dependency>
-              <groupId>cn.njzhyl</groupId>
+              <groupId>com.haixing_hu</groupId>
               <artifactId>checkstyle-rule</artifactId>
               <version>${checkstyle-rule.version}</version>
+              <scope>provided</scope>
             </dependency>
           </dependencies>
           <configuration>

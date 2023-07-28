@@ -14,3 +14,5 @@ target
 # IDEA project #
 *.iml
 .idea
+
+.flattened-pom.xml

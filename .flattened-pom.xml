@@ -2,12 +2,12 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.haixing_hu</groupId>
+  <groupId>ltd.qubit</groupId>
   <artifactId>pom-root</artifactId>
   <version>2.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Basic Maven Configurations used by all Java Projects</name>
-  <url>${project.home.url}/pom-root</url>
+  <url>${project.home.url}/${artifactId}</url>
   <organization>
     <name>Haixing Hu</name>
     <url>https://github.com/Haixing-Hu/</url>
@@ -22,7 +22,7 @@
   </licenses>
   <issueManagement>
     <system>Github</system>
-    <url>${project.home.url}/pom-root</url>
+    <url>${project.home.url}/${artifactId}/issues</url>
   </issueManagement>
   <properties>
     <taglist-maven-plugin.version>2.4</taglist-maven-plugin.version>
@@ -99,6 +99,7 @@
     <jgrapht.version>1.3.1</jgrapht.version>
     <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
     <antlr4-maven-plugin.version>4.9.2</antlr4-maven-plugin.version>
+    <checkstyle-rule.version>1.0.0</checkstyle-rule.version>
     <jstl.version>1.2-rev-1</jstl.version>
     <quartz.version>2.3.2</quartz.version>
     <webcollector.version>2.73-alpha</webcollector.version>
@@ -2743,7 +2744,7 @@
               <scope>provided</scope>
             </dependency>
             <dependency>
-              <groupId>com.haixing_hu</groupId>
+              <groupId>ltd.qubit</groupId>
               <artifactId>checkstyle-rule</artifactId>
               <version>${checkstyle-rule.version}</version>
               <scope>provided</scope>

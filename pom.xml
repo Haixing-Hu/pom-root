@@ -3,12 +3,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.haixing_hu</groupId>
+  <groupId>ltd.qubit</groupId>
   <artifactId>pom-root</artifactId>
   <packaging>pom</packaging>
   <version>2.0.0${build.suffix}</version>
   <name>Basic Maven Configurations used by all Java Projects</name>
-  <url>${project.home.url}/pom-root</url>
+  <url>${project.home.url}/${artifactId}</url>
 
   <organization>
     <name>Haixing Hu</name>
@@ -26,7 +26,7 @@
 
   <issueManagement>
     <system>Github</system>
-    <url>${project.home.url}/pom-root</url>
+    <url>${project.home.url}/${artifactId}/issues</url>
   </issueManagement>
 
   <profiles>
@@ -224,6 +224,9 @@
   </profiles>
 
   <properties>
+    <!-- Version numbers of all our projects -->
+    <checkstyle-rule.version>1.0.0</checkstyle-rule.version>
+
     <!-- General configuration constants -->
     <jdk.version>17</jdk.version>
     <jdk.javadoc.link>https://docs.oracle.com/en/java/javase/${jdk.version}/docs/api/</jdk.javadoc.link>
@@ -717,7 +720,7 @@
               <scope>provided</scope>
             </dependency>
             <dependency>
-              <groupId>com.haixing_hu</groupId>
+              <groupId>ltd.qubit</groupId>
               <artifactId>checkstyle-rule</artifactId>
               <version>${checkstyle-rule.version}</version>
               <scope>provided</scope>

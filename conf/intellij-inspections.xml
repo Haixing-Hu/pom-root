@@ -1,5 +1,5 @@
 <profile version="1.0">
-  <option name="myName" value="Haixing Hu" />
+  <option name="myName" value="Qubit" />
   <inspection_tool class="AmbiguousFieldAccess" enabled="true" level="WARNING" enabled_by_default="true" />
   <inspection_tool class="Anonymous2MethodRef" enabled="true" level="INFORMATION" enabled_by_default="true" />
   <inspection_tool class="AnonymousClassVariableHidesContainingMethodVariable" enabled="true" level="WARNING" enabled_by_default="true" />

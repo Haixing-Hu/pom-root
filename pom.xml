@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
   <version>2.0.0${build.suffix}</version>
   <name>Basic Maven Configurations used by all Java Projects</name>
-  <url>${project.home.url}/${artifactId}</url>
+  <url>${project.home.url}/${project.artifactId}</url>
 
   <organization>
     <name>Haixing Hu</name>
@@ -26,7 +26,7 @@
 
   <issueManagement>
     <system>Github</system>
-    <url>${project.home.url}/${artifactId}/issues</url>
+    <url>${project.home.url}/${project.artifactId}/issues</url>
   </issueManagement>
 
   <profiles>
@@ -534,7 +534,6 @@
             <target>${jdk.version}</target>
             <compilerVersion>${jdk.version}</compilerVersion>
             <encoding>${project.encoding}</encoding>
-            <optimize>true</optimize>
             <compilerArgs>
               <arg>-Xlint:all,-processing</arg>  <!-- 去除有关与注释处理相关的问题的警告：No processor claimed any of these annotations -->
               <arg>${maven.compiler.args}</arg>
@@ -717,13 +716,13 @@
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
               <version>${checkstyle.version}</version>
-              <scope>provided</scope>
+              <scope>runtime</scope>
             </dependency>
             <dependency>
               <groupId>ltd.qubit</groupId>
               <artifactId>checkstyle-rule</artifactId>
               <version>${checkstyle-rule.version}</version>
-              <scope>provided</scope>
+              <scope>runtime</scope>
             </dependency>
           </dependencies>
           <executions>

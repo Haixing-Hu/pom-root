@@ -1213,7 +1213,7 @@
         <scope>test</scope>
       </dependency>
       <dependency>
-        <groupId>cn.njzhyl</groupId>
+        <groupId>ltd.qubit</groupId>
         <artifactId>common-test</artifactId>
         <version>${common-test.version}${build.suffix}</version>
         <type>jar</type>

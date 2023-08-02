@@ -42,6 +42,7 @@
     <checkstyle-rule.version>1.0.0</checkstyle-rule.version>
     <common-annotation.version>2.1.0</common-annotation.version>
     <common-java.version>4.1.0</common-java.version>
+    <common-random.version>4.1.0</common-random.version>
 
     <!-- General configuration constants -->
     <jdk.version>17</jdk.version>

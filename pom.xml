@@ -2,7 +2,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~
   ~    Copyright (c) 2022 - 2023.
-  ~    Haixing Hu, Qubit Ltd.
+  ~    Haixing Hu, Qubit Co. Ltd.
   ~
   ~    All rights reserved.
   ~
@@ -1207,6 +1207,13 @@
       </dependency>
       <dependency>
         <groupId>ltd.qubit</groupId>
+        <artifactId>common-java</artifactId>
+        <version>${common-java.version}${build.suffix}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>ltd.qubit</groupId>
         <artifactId>common-random</artifactId>
         <version>${common-random.version}${build.suffix}</version>
         <type>jar</type>
@@ -1218,13 +1225,6 @@
         <version>${common-test.version}${build.suffix}</version>
         <type>jar</type>
         <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>ltd.qubit</groupId>
-        <artifactId>common-java</artifactId>
-        <version>${common-java.version}${build.suffix}</version>
-        <type>jar</type>
-        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>ltd.qubit</groupId>

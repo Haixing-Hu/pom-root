@@ -1,3 +1,11 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~    Copyright (c) 2022 - 2023.
+  ~    Haixing Hu, Qubit Co. Ltd.
+  ~
+  ~    All rights reserved.
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <code_scheme name="Qubit" version="173">
   <option name="OTHER_INDENT_OPTIONS">
     <value>
@@ -6,7 +14,7 @@
       <option name="TAB_SIZE" value="2" />
     </value>
   </option>
-  <option name="LINE_SEPARATOR" value="&#xA;" />
+  <option name="LINE_SEPARATOR" value="&#10;" />
   <option name="RIGHT_MARGIN" value="100" />
   <option name="SOFT_MARGINS" value="80" />
   <AndroidXmlCodeStyleSettings>
@@ -32,19 +40,33 @@
     </option>
     <option name="IMPORT_LAYOUT_TABLE">
       <value>
-        <package name="com.github.haixing_hu" withSubpackages="true" static="false" />
+        <package name="java" withSubpackages="true" static="false" />
+        <emptyLine />
+        <package name="javax" withSubpackages="true" static="false" />
+        <emptyLine />
+        <package name="jakarta" withSubpackages="true" static="false" />
+        <emptyLine />
+        <package name="ltd.qubit" withSubpackages="true" static="false" />
+        <emptyLine />
+        <package name="org" withSubpackages="true" static="false" />
+        <emptyLine />
+        <package name="com" withSubpackages="true" static="false" />
         <emptyLine />
         <package name="" withSubpackages="true" static="false" />
         <emptyLine />
-        <package name="java" withSubpackages="true" static="false" />
-        <package name="javax" withSubpackages="true" static="false" />
+        <package name="java" withSubpackages="true" static="true" />
         <emptyLine />
-        <package name="com.github.haixing_hu" withSubpackages="true" static="true" />
+        <package name="javax" withSubpackages="true" static="true" />
+        <emptyLine />
+        <package name="jakarta" withSubpackages="true" static="true" />
+        <emptyLine />
+        <package name="ltd.qubit" withSubpackages="true" static="true" />
+        <emptyLine />
+        <package name="org" withSubpackages="true" static="true" />
+        <emptyLine />
+        <package name="com" withSubpackages="true" static="true" />
         <emptyLine />
         <package name="" withSubpackages="true" static="true" />
-        <emptyLine />
-        <package name="java" withSubpackages="true" static="true" />
-        <package name="javax" withSubpackages="true" static="true" />
       </value>
     </option>
     <option name="JD_PARAM_DESCRIPTION_ON_NEW_LINE" value="true" />

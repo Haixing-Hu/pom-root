@@ -29,14 +29,15 @@ PROJECT_HOME=$(pwd);
 
 PROJECT_LIST_FILE="${PROJECT_HOME}/pom-root/script/project-list.txt";
 for project in $(cat ${PROJECT_LIST_FILE}); do
-        project_dir="${PROJECT_HOME}/${project}";
-        if [ ! -d "${project_dir}" ]; then
-                echo "Try to clone ${project_dir} ...";
-                if git clone git@ascentdimension.dyndns.org:${project}; then
-                    echo "Successfully clone the project ${project}.";
-                else
-                    echo "Failed to clone the project ${project}.";
-                fi
-        fi
+  project_dir="${PROJECT_HOME}/${project}";
+  if [ ! -d "${project_dir}" ]; then
+    repository="git@github.com:Haixing-Hu/${project}.git";
+    echo "Try to clone ${repository} ...";
+    if git clone ${repository}; then
+      echo "Successfully clone the project ${project}.";
+    else
+      echo "Failed to clone the project ${project}.";
+    fi
+  fi
 done
 cd "${CURRENT_DIR}";

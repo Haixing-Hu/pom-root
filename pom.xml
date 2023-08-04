@@ -3060,13 +3060,6 @@
       </dependency>
       <dependency>
         <groupId>net.javacrumbs.json-unit</groupId>
-        <artifactId>json-unit-fluent</artifactId>
-        <version>${json-unit.version}</version>
-        <type>jar</type>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>net.javacrumbs.json-unit</groupId>
         <artifactId>json-unit-json-path</artifactId>
         <version>${json-unit.version}</version>
         <type>jar</type>
@@ -3531,11 +3524,6 @@
       <artifactId>junit-jupiter</artifactId>
       <scope>test</scope>
     </dependency>
-    <!-- <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <scope>test</scope>
-    </dependency> -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
@@ -3619,11 +3607,6 @@
     <dependency>
       <groupId>net.javacrumbs.json-unit</groupId>
       <artifactId>json-unit-assertj</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>net.javacrumbs.json-unit</groupId>
-      <artifactId>json-unit-fluent</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>

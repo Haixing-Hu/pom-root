@@ -1043,6 +1043,12 @@
               <version>${mysql-connector-java.version}</version>
               <type>jar</type>
             </dependency>
+            <dependency>
+              <groupId>org.flywaydb</groupId>
+              <artifactId>flyway-mysql</artifactId>
+              <version>${flyway.version}</version>
+              <type>jar</type>
+            </dependency>
           </dependencies>
         </plugin>
         <!-- configuration of the maven shade plugin -->

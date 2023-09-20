@@ -1,11 +1,3 @@
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~
-  ~    Copyright (c) 2022 - 2023.
-  ~    Haixing Hu, Qubit Co. Ltd.
-  ~
-  ~    All rights reserved.
-  ~
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <code_scheme name="Qubit" version="173">
   <option name="OTHER_INDENT_OPTIONS">
     <value>
@@ -46,13 +38,13 @@
         <emptyLine />
         <package name="jakarta" withSubpackages="true" static="false" />
         <emptyLine />
-        <package name="ltd.qubit" withSubpackages="true" static="false" />
-        <emptyLine />
         <package name="org" withSubpackages="true" static="false" />
         <emptyLine />
         <package name="com" withSubpackages="true" static="false" />
         <emptyLine />
         <package name="" withSubpackages="true" static="false" />
+        <emptyLine />
+        <package name="ltd.qubit" withSubpackages="true" static="false" />
         <emptyLine />
         <package name="java" withSubpackages="true" static="true" />
         <emptyLine />
@@ -60,13 +52,13 @@
         <emptyLine />
         <package name="jakarta" withSubpackages="true" static="true" />
         <emptyLine />
-        <package name="ltd.qubit" withSubpackages="true" static="true" />
-        <emptyLine />
         <package name="org" withSubpackages="true" static="true" />
         <emptyLine />
         <package name="com" withSubpackages="true" static="true" />
         <emptyLine />
         <package name="" withSubpackages="true" static="true" />
+        <emptyLine />
+        <package name="ltd.qubit" withSubpackages="true" static="true" />
       </value>
     </option>
     <option name="JD_PARAM_DESCRIPTION_ON_NEW_LINE" value="true" />
@@ -225,6 +217,13 @@
   </codeStyleSettings>
   <codeStyleSettings language="SCSS">
     <indentOptions>
+      <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      <option name="TAB_SIZE" value="2" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="SQL">
+    <indentOptions>
+      <option name="INDENT_SIZE" value="2" />
       <option name="CONTINUATION_INDENT_SIZE" value="4" />
       <option name="TAB_SIZE" value="2" />
     </indentOptions>

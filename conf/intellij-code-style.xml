@@ -38,6 +38,10 @@
         <emptyLine />
         <package name="jakarta" withSubpackages="true" static="false" />
         <emptyLine />
+        <package name="android" withSubpackages="true" static="false" />
+        <emptyLine />
+        <package name="androidx" withSubpackages="true" static="false" />
+        <emptyLine />
         <package name="org" withSubpackages="true" static="false" />
         <emptyLine />
         <package name="com" withSubpackages="true" static="false" />
@@ -51,6 +55,10 @@
         <package name="javax" withSubpackages="true" static="true" />
         <emptyLine />
         <package name="jakarta" withSubpackages="true" static="true" />
+        <emptyLine />
+        <package name="android" withSubpackages="true" static="true" />
+        <emptyLine />
+        <package name="androidx" withSubpackages="true" static="true" />
         <emptyLine />
         <package name="org" withSubpackages="true" static="true" />
         <emptyLine />

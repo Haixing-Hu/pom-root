@@ -1,18 +1,65 @@
-*.class
+# Eclipse Project
+.classpath
+.project
+.settings
+/target
 
-# Package Files #
+# IDEA Project
+workspace.xml
+tasks.xml
+.idea
+*.iml
+.attach_pid*
+
+# Maven versions plugin
+**/*/pom.xml.versionsBackup
+pom.xml.versionsBackup
+
+# maven flatten plugin
+**/*/.flattened-pom.xml
+.flattened-pom.xml
+
+# Binary Files
+*.ear
 *.jar
 *.war
-*.ear
+*.exe
 
-# Eclipse Projects #
-.project
-.classpath
-/.settings
-target
+# Log Files
+*.log
 
-# IDEA project #
-*.iml
-.idea
+# System Cache Files
+.DS_Store
+Thumbs.db
+desktop.ini
 
-.flattened-pom.xml
+# Embedded MySQL database
+.mysqltmp
+
+# LaTeX cache files
+*.aux
+*.toc
+*.out
+*.dvi
+*.ps
+*.gz
+*.glo
+*.gls
+*.thm
+*.bbl
+*.blg
+*.mpx
+*.synctex
+*.synctex(busy)
+*.bak
+*.idx
+*.ilg
+*.ind
+.texpadtmp
+~$*
+
+# Python files
+__pycache__
+*.pyc
+
+**/*/target

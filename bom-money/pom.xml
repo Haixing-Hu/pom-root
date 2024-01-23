@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~    Copyright (c) 2017 - 2022.
+  ~    Nanjing Smart Medical Investment Operation Service Co. Ltd.
+  ~
+  ~    All rights reserved.
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ltd.qubit</groupId>
+    <artifactId>pom-meta</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>bom-money</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>BOM of Javax Money API</name>
+
+  <properties>
+    <javax-money-api.version>1.1</javax-money-api.version>
+    <moneta.version>1.4.2</moneta.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>javax.money</groupId>
+        <artifactId>money-api</artifactId>
+        <version>${javax-money-api.version}</version>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.javamoney.moneta</groupId>
+        <artifactId>moneta-core</artifactId>
+        <version>${moneta.version}</version>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.javamoney.moneta</groupId>
+        <artifactId>moneta-convert</artifactId>
+        <version>${moneta.version}</version>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.javamoney.moneta</groupId>
+        <artifactId>moneta-convert-imf</artifactId>
+        <version>${moneta.version}</version>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.javamoney.moneta</groupId>
+        <artifactId>moneta-convert-ecb</artifactId>
+        <version>${moneta.version}</version>
+        <scope>compile</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

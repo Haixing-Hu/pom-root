@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~    Copyright (c) 2017 - 2022.
+  ~    Nanjing Smart Medical Investment Operation Service Co. Ltd.
+  ~
+  ~    All rights reserved.
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ltd.qubit</groupId>
+    <artifactId>pom-meta</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>bom-lang</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>BOM of Java Language</name>
+
+  <properties>
+    <objenesis.version>3.3</objenesis.version>
+    <classgraph.version>4.8.165</classgraph.version>
+    <cloning.version>1.9.12</cloning.version>
+    <typetools.version>0.6.3</typetools.version>
+    <mutability-detector.version>0.10.6</mutability-detector.version>
+    <ezmorph.version>1.0.6</ezmorph.version>
+    <dozer.version>5.5.1</dozer.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.objenesis</groupId>
+        <artifactId>objenesis</artifactId>
+        <version>${objenesis.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.github.classgraph</groupId>
+        <artifactId>classgraph</artifactId>
+        <version>${classgraph.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>uk.com.robust-it</groupId>
+        <artifactId>cloning</artifactId>
+        <version>${cloning.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>net.jodah</groupId>
+        <artifactId>typetools</artifactId>
+        <version>${typetools.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.mutabilitydetector</groupId>
+        <artifactId>MutabilityDetector</artifactId>
+        <version>${mutability-detector.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- bean mapping -->
+      <dependency>
+        <groupId>net.sf.ezmorph</groupId>
+        <artifactId>ezmorph</artifactId>
+        <version>${ezmorph.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>net.sf.dozer</groupId>
+        <artifactId>dozer</artifactId>
+        <version>${dozer.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

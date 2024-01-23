@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~    Copyright (c) 2017 - 2022.
+  ~    Nanjing Smart Medical Investment Operation Service Co. Ltd.
+  ~
+  ~    All rights reserved.
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ltd.qubit</groupId>
+    <artifactId>pom-meta</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>bom-ai</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>BOM of AI</name>
+
+  <properties>
+    <javacv.version>1.5.7</javacv.version>
+    <tess4j.version>4.5.4</tess4j.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Java OpenCV -->
+      <dependency>
+        <groupId>org.bytedeco</groupId>
+        <artifactId>javacv-platform</artifactId>
+        <version>${javacv.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- Tesseract OCR -->
+      <dependency>
+        <groupId>net.sourceforge.tess4j</groupId>
+        <artifactId>tess4j</artifactId>
+        <version>${tess4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

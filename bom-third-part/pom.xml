@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~    Copyright (c) 2017 - 2022.
+  ~    Nanjing Smart Medical Investment Operation Service Co. Ltd.
+  ~
+  ~    All rights reserved.
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ltd.qubit</groupId>
+    <artifactId>pom-meta</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>bom-third-part</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>BOM of Third Part Services</name>
+
+  <properties>
+    <yunpian.version>1.2.7</yunpian.version>
+    <miaoxin.version>1.0.0</miaoxin.version>
+    <aliyun-sdk-oss.version>3.17.4</aliyun-sdk-oss.version>
+    <foxinmy-weixin4j-mp.version>1.10.2</foxinmy-weixin4j-mp.version>
+    <foxinmy-weixin4j-qy.version>1.10.2</foxinmy-weixin4j-qy.version>
+    <foxinmy-weixin4j-server.version>1.10.2</foxinmy-weixin4j-server.version>
+    <foxinmy-umeng4j.version>1.1.3</foxinmy-umeng4j.version>
+    <foxinmy-easemob4j.version>1.1.3</foxinmy-easemob4j.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- 云片网 短信服务 -->
+      <dependency>
+        <groupId>com.yunpian.sdk</groupId>
+        <artifactId>yunpian-java-sdk</artifactId>
+        <version>${yunpian.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- 秒信 短信服务 -->
+      <dependency>
+        <groupId>com.miaoxin.sdk</groupId>
+        <artifactId>miaoxin-java-sdk</artifactId>
+        <version>${miaoxin.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- 微信 -->
+      <dependency>
+        <groupId>com.foxinmy</groupId>
+        <artifactId>weixin4j-mp</artifactId>
+        <version>${foxinmy-weixin4j-mp.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.foxinmy</groupId>
+        <artifactId>weixin4j-qy</artifactId>
+        <version>${foxinmy-weixin4j-qy.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.foxinmy</groupId>
+        <artifactId>weixin4j-server</artifactId>
+        <version>${foxinmy-weixin4j-server.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- 友盟 -->
+      <dependency>
+        <groupId>com.foxinmy</groupId>
+        <artifactId>umeng4j</artifactId>
+        <version>${foxinmy-umeng4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- 环信 -->
+      <dependency>
+        <groupId>com.foxinmy</groupId>
+        <artifactId>easemob4j</artifactId>
+        <version>${foxinmy-easemob4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- 阿里云 OSS -->
+      <dependency>
+        <groupId>com.aliyun.oss</groupId>
+        <artifactId>aliyun-sdk-oss</artifactId>
+        <version>${aliyun-sdk-oss.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

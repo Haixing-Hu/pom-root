@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~    Copyright (c) 2017 - 2022.
+  ~    Nanjing Smart Medical Investment Operation Service Co. Ltd.
+  ~
+  ~    All rights reserved.
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ltd.qubit</groupId>
+    <artifactId>pom-internal</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../pom-internal/pom.xml</relativePath>
+  </parent>
+  <artifactId>pom-maven-plugin</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>POM Managing Maven Plugins</name>
+
+  <properties>
+    <!-- Version numbers of the maven plugins -->
+    <maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
+    <maven-clean-plugin.version>3.3.2</maven-clean-plugin.version>
+    <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
+    <maven-install-plugin.version>3.1.1</maven-install-plugin.version>
+    <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
+    <!-- NOTE: maven-javadoc-plugin > v3.2.0 has a bug in JDK 8, which reports MalformedInputException -->
+    <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
+    <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+    <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
+    <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
+    <maven-assembly-plugin.version>2.6</maven-assembly-plugin.version>
+    <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+    <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
+    <maven-surefire-report-plugin.version>3.2.5</maven-surefire-report-plugin.version>
+    <maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
+    <maven-project-info-reports-plugin.version>3.1.2</maven-project-info-reports-plugin.version>
+    <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
+    <maven-site-plugin.version>4.0.0-M13</maven-site-plugin.version>
+    <maven-shade-plugin.version>3.5.1</maven-shade-plugin.version>
+    <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
+    <maven-help-plugin.version>3.4.0</maven-help-plugin.version>
+    <maven-project-info-plugin.version>3.5.0</maven-project-info-plugin.version>
+    <dependency-check-maven.version>9.0.9</dependency-check-maven.version>
+    <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
+    <jetty-maven-plugin.version>11.0.19</jetty-maven-plugin.version>
+    <javafx-maven-plugin.version>2.0</javafx-maven-plugin.version>
+    <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
+    <cal10n-maven-plugin.version>0.7.4</cal10n-maven-plugin.version>
+    <antlr4-maven-plugin.version>${antlr4.version}</antlr4-maven-plugin.version>
+    <spotbugs-maven-plugin.version>4.8.3.0</spotbugs-maven-plugin.version>
+    <maven-pmd-plugin.version>3.21.2</maven-pmd-plugin.version>
+    <maven-checkstyle-plugin.version>3.3.1</maven-checkstyle-plugin.version>
+    <emma-maven-plugin.version>1.0-alpha-3</emma-maven-plugin.version>
+    <jacoco-maven-plugin.version>0.8.11</jacoco-maven-plugin.version>
+    <clover-maven-plugin.version>4.5.1</clover-maven-plugin.version>
+    <taglist-maven-plugin.version>3.0.0</taglist-maven-plugin.version>
+    <dashboard-maven-plugin.version>1.0.0-beta-1</dashboard-maven-plugin.version>
+    <native2ascii-maven-plugin.version>1.0-beta-1</native2ascii-maven-plugin.version>
+    <versions-maven-plugin.version>2.16.2</versions-maven-plugin.version>
+    <properties-maven-plugin.version>1.2.1</properties-maven-plugin.version>
+    <swagger-codegen-maven-plugin.version>3.0.21</swagger-codegen-maven-plugin.version>
+    <flyway-maven-plugin.version>${flyway.version}</flyway-maven-plugin.version>   <!-- 不要升级！flyway > 7.15.0 不再支持 MySQL 5.7 -->
+    <mariadb4j-maven-plugin.version>${mariadb4j.version}</mariadb4j-maven-plugin.version>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <!-- configuration of maven enforcer plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>${maven-enforcer-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>enforce-maven</id>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <requireMavenVersion>
+                    <version>x >= 3.5.0</version>
+                  </requireMavenVersion>
+                </rules>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration of maven helper plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-help-plugin</artifactId>
+          <version>${maven-help-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>show-active-profile</id>
+              <phase>process-resources</phase>
+              <goals>
+                <goal>active-profiles</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration of clean plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>${maven-clean-plugin.version}</version>
+        </plugin>
+        <!-- configuration of deploy plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven-deploy-plugin.version}</version>
+        </plugin>
+        <!-- configuration of install plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>${maven-install-plugin.version}</version>
+        </plugin>
+        <!-- configuration of compiler plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven-compiler-plugin.version}</version>
+          <configuration>
+            <source>${jdk.version}</source>
+            <target>${jdk.version}</target>
+            <compilerVersion>${jdk.version}</compilerVersion>
+            <encoding>${project.encoding}</encoding>
+            <optimize>true</optimize>
+            <compilerArgs>
+              <arg>-Xlint:all,-processing</arg>  <!-- 去除有关与注释处理相关的问题的警告：No processor claimed any of these annotations -->
+              <arg>${maven.compiler.args}</arg>
+            </compilerArgs>
+          </configuration>
+        </plugin>
+        <!-- configuration of the javadoc plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${maven-javadoc-plugin.version}</version>
+          <configuration>
+            <charset>${project.encoding}</charset>
+            <encoding>${project.encoding}</encoding>
+            <docencoding>${project.encoding}</docencoding>
+            <!-- reduce console output. Can override with -Dquiet=false -->
+            <quiet>true</quiet>
+            <failOnError>true</failOnError>
+            <failOnWarnings>false</failOnWarnings>
+            <doclint>none</doclint>
+            <source>${jdk.version}</source>
+            <links>
+              <link>${jdk.javadoc.link}</link>
+            </links>
+          </configuration>
+          <executions>
+            <execution>
+              <id>attach-javadoc</id>
+              <phase>package</phase>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration of the source plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>${maven-source-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>jar-no-fork</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration of the resources plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${maven-resources-plugin.version}</version>
+          <configuration>
+            <encoding>${project.encoding}</encoding>
+            <propertiesEncoding>${project.encoding}</propertiesEncoding>
+          </configuration>
+        </plugin>
+        <!-- configuration of the flatten plugin -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>flatten-maven-plugin</artifactId>
+          <version>${flatten-maven-plugin.version}</version>
+          <configuration>
+            <updatePomFile>true</updatePomFile>
+            <flattenMode>resolveCiFriendliesOnly</flattenMode>
+          </configuration>
+          <executions>
+            <execution>
+              <id>flatten</id>
+              <phase>process-resources</phase>
+              <goals>
+                <goal>flatten</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>flatten-clean</id>
+              <phase>clean</phase>
+              <goals>
+                <goal>clean</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration of the surefire plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${maven-surefire-plugin.version}</version>
+          <configuration>
+            <skipTests>${skipUTs}</skipTests>
+            <includes>
+              <!-- Includes unit tests -->
+              <include>**/*Test.java</include>
+            </includes>
+            <excludes>
+              <!-- Excludes integration tests when unit tests are run. -->
+              <exclude>**/IT*.java</exclude>
+              <exclude>**/*IT.java</exclude>
+              <!-- Excludes inner classes. -->
+              <exclude>**/*$*</exclude>
+              <!-- Exclides Clover generated inner classes -->
+              <exclude>**/*$__CLR*</exclude>
+            </excludes>
+            <useSystemClassLoader>false</useSystemClassLoader>
+            <!-- Sets the VM argument line used when unit tests are run. -->
+            <!-- <argLine>@{surefireArgLine} -Xmx1024m</argLine> -->
+            <argLine>-Xmx1024m ${test.jvm.options}</argLine>
+            <!-- Running the unit test parallelly -->
+            <parallel>classes</parallel>
+            <threadCount>4</threadCount>
+            <forkedProcessExitTimeoutInSeconds>60</forkedProcessExitTimeoutInSeconds>
+            <forkCount>1</forkCount>
+            <reuseForks>true</reuseForks>
+          </configuration>
+        </plugin>
+        <!-- configuration of the surefire-report plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-report-plugin</artifactId>
+          <version>${maven-surefire-report-plugin.version}</version>
+        </plugin>
+        <!-- configuration of the failsafe plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-failsafe-plugin</artifactId>
+          <version>${maven-failsafe-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>integration-tests</id>
+              <goals>
+                <goal>integration-test</goal>
+                <goal>verify</goal>
+              </goals>
+              <configuration>
+                <skipTests>${skipTests}</skipTests>
+                <skipITs>${skipITs}</skipITs>
+                <includes>
+                  <include>**/*IT.java</include>
+                </includes>
+                <!-- Sets the VM argument line used when integration tests are run. -->
+                <!-- <argLine>@{failsafeArgLine} -Xmx1024m</argLine> -->
+                <argLine>-Xmx1024m ${test.jvm.options}</argLine>
+                <forkedProcessExitTimeoutInSeconds>60</forkedProcessExitTimeoutInSeconds>
+                <forkCount>1</forkCount>
+                <reuseForks>true</reuseForks>
+              </configuration>
+            </execution>
+          </executions>
+<!--          <dependencies>-->
+<!--            <dependency>-->
+<!--              <groupId>org.junit.jupiter</groupId>-->
+<!--              <artifactId>junit-jupiter</artifactId>-->
+<!--            </dependency>-->
+<!--          </dependencies>-->
+        </plugin>
+        <!-- configuraiton of the project-info-reports-plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>${maven-project-info-plugin.version}</version>
+        </plugin>
+        <!-- configuration of the checkstyle plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>${maven-checkstyle-plugin.version}</version>
+          <configuration>
+            <configLocation>checkstyle-njzhyl-java-style.xml</configLocation>
+            <encoding>UTF-8</encoding>
+            <consoleOutput>true</consoleOutput>
+            <failsOnError>true</failsOnError>
+            <linkXRef>false</linkXRef>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>com.puppycrawl.tools</groupId>
+              <artifactId>checkstyle</artifactId>
+              <version>${checkstyle.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>ltd.qubit</groupId>
+              <artifactId>checkstyle-rule</artifactId>
+              <version>${checkstyle-rule.version}</version>
+            </dependency>
+          </dependencies>
+          <executions>
+            <execution>
+              <id>check</id>
+              <phase>validate</phase>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration of the spotbugs plugin -->
+        <plugin>
+          <groupId>com.github.spotbugs</groupId>
+          <artifactId>spotbugs-maven-plugin</artifactId>
+          <version>${spotbugs-maven-plugin.version}</version>
+          <configuration>
+            <failOnError>true</failOnError>
+            <effort>max</effort>
+            <threshold>Default</threshold>
+            <xmlOutput>true</xmlOutput>
+            <xmlOutputDirectory>target/site</xmlOutputDirectory>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>com.github.spotbugs</groupId>
+              <artifactId>spotbugs</artifactId>
+              <version>${spotbugs.version}</version>
+            </dependency>
+          </dependencies>
+          <!-- <executions>
+            <execution>
+              <id>check</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions> -->
+        </plugin>
+        <!-- configuration of the dependency check plugin -->
+        <plugin>
+          <groupId>org.owasp</groupId>
+          <artifactId>dependency-check-maven</artifactId>
+          <version>${dependency-check-maven.version}</version>
+          <executions>
+            <execution>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration for the emma plugin -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>emma-maven-plugin</artifactId>
+          <version>${emma-maven-plugin.version}</version>
+        </plugin>
+        <!-- configuration for the codehaus plugin -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>cobertura-maven-plugin</artifactId>
+          <version>${cobertura-maven-plugin.version}</version>
+        </plugin>
+        <!-- configuration for the clover plugin -->
+        <plugin>
+          <groupId>org.openclover</groupId>
+          <artifactId>clover-maven-plugin</artifactId>
+          <version>${clover-maven-plugin.version}</version>
+          <configuration>
+            <!-- Exclude the assert statement, and the getter/setter, equals, hashCode, and toString methods -->
+            <methodContexts>
+              <equals>(.* )?public[ ]+boolean[ ]+equals\((final[ ]+)?Object[ ]+.*</equals>
+              <hashcode>(.* )?public[ ]+int[ ]+hashCode\(\).*</hashcode>
+              <tostring>(.* )?public[ ]+String[ ]+toString\(\).*</tostring>
+            </methodContexts>
+            <contextFilters>assert,property,equals,hashcode,tostring</contextFilters>
+            <!-- The desired test coverage percentage-->
+            <targetPercentage>50%</targetPercentage>
+            <!-- Do not failed if the target percentage is violated -->
+            <failOnViolation>false</failOnViolation>
+            <!-- Configure the format of the generated report -->
+            <generatePdf>false</generatePdf>
+            <generateXml>false</generateXml>
+            <generateHtml>true</generateHtml>
+            <generateJson>true</generateJson>
+            <!-- Generating historical reports -->
+            <generateHistorical>true</generateHistorical>
+            <!-- Set the location of the history directory to avoid having mvn clean remove your savepoints -->
+            <historyDir>${user.home}/.clover/history/${project.groupId}/${project.artifactId}</historyDir>
+            <!-- Set the location of the snapshot directory to avoid having mvn clean remove your snapshots -->
+            <snapshot>${user.home}/.clover/snapshot/${project.groupId}/${project.artifactId}</snapshot>
+          </configuration>
+          <executions>
+            <execution>
+              <id>instrument</id>
+              <phase>generate-sources</phase>
+              <goals>
+                <goal>instrument</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>generate-report</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>aggregate</goal>
+                <goal>clover</goal>
+                <goal>save-history</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration for the jacoco plugin -->
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>${jacoco-maven-plugin.version}</version>
+          <configuration>
+            <outputEncoding>${project.encoding}</outputEncoding>
+            <sourceEncoding>${project.encoding}</sourceEncoding>
+          </configuration>
+          <executions>
+            <execution>
+              <id>pre-unit-test</id>
+              <phase>initialize</phase>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+              <configuration>
+                <destFile>${project.build.directory}/jacoco-unit.exec</destFile>
+                <propertyName>surefireArgLine</propertyName>
+              </configuration>
+            </execution>
+            <execution>
+              <id>post-unit-test</id>
+              <phase>test</phase>
+              <goals>
+                <goal>report</goal>
+              </goals>
+              <configuration>
+                <dataFile>${project.build.directory}/jacoco-unit.exec</dataFile>
+                <outputDirectory>${project.reporting.outputDirectory}/jacoco-unit</outputDirectory>
+              </configuration>
+            </execution>
+            <execution>
+              <id>pre-integration-test</id>
+              <phase>pre-integration-test</phase>
+              <goals>
+                <goal>prepare-agent-integration</goal>
+              </goals>
+              <configuration>
+                <destFile>${project.build.directory}/jacoco-it.exec</destFile>
+                <propertyName>failsafeArgLine</propertyName>
+              </configuration>
+            </execution>
+            <execution>
+              <id>post-integration-test</id>
+              <phase>post-integration-test</phase>
+              <goals>
+                <goal>report-integration</goal>
+              </goals>
+              <configuration>
+                <dataFile>${project.build.directory}/jacoco-it.exec</dataFile>
+                <outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration for the PMD plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-pmd-plugin</artifactId>
+          <version>${maven-pmd-plugin.version}</version>
+        </plugin>
+        <!-- configuration for the taglist plugin -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>taglist-maven-plugin</artifactId>
+          <version>${taglist-maven-plugin.version}</version>
+          <configuration>
+            <encoding>${project.encoding}</encoding>
+            <tagListOptions>
+              <tagClasses>
+                <tagClass>
+                  <displayName>Todo Work</displayName>
+                  <tags>
+                    <tag>
+                      <matchString>todo</matchString>
+                      <matchType>ignoreCase</matchType>
+                    </tag>
+                    <tag>
+                      <matchString>FIXME</matchString>
+                      <matchType>exact</matchType>
+                    </tag>
+                  </tags>
+                </tagClass>
+              </tagClasses>
+            </tagListOptions>
+          </configuration>
+        </plugin>
+        <!-- configuration for the dashboard plugin -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>dashboard-maven-plugin</artifactId>
+          <version>${dashboard-maven-plugin.version}</version>
+        </plugin>
+        <!-- configuration of anltr4 plugin -->
+        <plugin>
+          <groupId>org.antlr</groupId>
+          <artifactId>antlr4-maven-plugin</artifactId>
+          <configuration>
+            <outputDirectory>src/main/java</outputDirectory>
+            <visitor>true</visitor>
+          </configuration>
+          <executions>
+            <execution>
+              <id>antlr</id>
+              <goals>
+                <goal>antlr4</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration of the war plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>${maven-war-plugin.version}</version>
+        </plugin>
+        <!-- configuration of the jetty maven plugin -->
+        <plugin>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-maven-plugin</artifactId>
+          <version>${jetty-maven-plugin.version}</version>
+          <configuration>
+            <stopPort>9095</stopPort>
+            <stopKey>STOP</stopKey>
+            <!--<connectors>-->
+            <!--<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">-->
+            <!--<port>9090</port>-->
+            <!--<maxIdleTime>60000</maxIdleTime>-->
+            <!--</connector>-->
+            <!--</connectors>-->
+          </configuration>
+          <executions>
+            <execution>
+              <id>start-jetty</id>
+              <phase>pre-integration-test</phase>
+              <goals>
+                <goal>run</goal>
+              </goals>
+              <configuration>
+                <!--<daemon>true</daemon>-->
+              </configuration>
+            </execution>
+            <execution>
+              <id>stop-jetty</id>
+              <phase>post-integration-test</phase>
+              <goals>
+                <goal>stop</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration of the maven version plugin -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>versions-maven-plugin</artifactId>
+          <version>${versions-maven-plugin.version}</version>
+          <configuration>
+            <excludeProperties>flyway.version,flyway-maven-plugin.version,maven-javadoc-plugin.version</excludeProperties>
+          </configuration>
+        </plugin>
+        <!-- configuration of the maven site plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${maven-site-plugin.version}</version>
+        </plugin>
+        <!-- configuration of the flyway plugin -->
+        <plugin>
+          <groupId>org.flywaydb</groupId>
+          <artifactId>flyway-maven-plugin</artifactId>
+          <version>${flyway-maven-plugin.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>com.h2database</groupId>
+              <artifactId>h2</artifactId>
+              <version>${h2.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>mysql</groupId>
+              <artifactId>mysql-connector-j</artifactId>
+              <version>${mysql-connector-j.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>ch.vorburger.mariaDB4j</groupId>
+              <artifactId>mariaDB4j</artifactId>
+              <version>${mariadb4j.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <!-- configuration of the maven shade plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>${maven-shade-plugin.version}</version>
+          <executions>
+            <!-- Run shade goal on package phase -->
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>shade</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- configuration of the mariaDB4j maven plugin -->
+        <plugin>
+          <groupId>ch.vorburger.mariaDB4j</groupId>
+          <artifactId>mariaDB4j-maven-plugin</artifactId>
+          <version>${mariadb4j-maven-plugin.version}</version>
+        </plugin>
+        <!-- configuration of the properties-maven-plugin -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>properties-maven-plugin</artifactId>
+          <version>${properties-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <phase>initialize</phase>
+              <goals>
+                <goal>read-project-properties</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- Echo all available Maven properties -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-antrun-plugin</artifactId>
+          <version>${maven-antrun-plugin.version}</version>
+          <executions>
+            <execution>
+              <phase>validate</phase>
+              <goals>
+                <goal>run</goal>
+              </goals>
+              <configuration>
+                <target>
+                  <echoproperties/>
+                </target>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

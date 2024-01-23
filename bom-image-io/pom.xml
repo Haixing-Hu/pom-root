@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~    Copyright (c) 2017 - 2022.
+  ~    Nanjing Smart Medical Investment Operation Service Co. Ltd.
+  ~
+  ~    All rights reserved.
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ltd.qubit</groupId>
+    <artifactId>pom-meta</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>bom-image-io</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>BOM of ImageIO</name>
+
+  <properties>
+    <imageio.version>3.10.1</imageio.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-core</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-bmp</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-jpeg</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-tiff</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-tga</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-sgi</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-psd</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-pdf</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-pict</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-pcx</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-icns</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-hdr</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.twelvemonkeys.imageio</groupId>
+        <artifactId>imageio-webp</artifactId>
+        <version>${imageio.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

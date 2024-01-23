@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~    Copyright (c) 2017 - 2022.
+  ~    Nanjing Smart Medical Investment Operation Service Co. Ltd.
+  ~
+  ~    All rights reserved.
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ltd.qubit</groupId>
+    <artifactId>pom-meta</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>bom-misc</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>BOM of Misc Third Part Libraries</name>
+
+  <properties>
+<!--    <guava-variant>jre</guava-variant>  &lt;!&ndash; 可根据情况选择 jre 或 android &ndash;&gt;-->
+    <guava.version>33.0.0-jre</guava.version>
+    <protobuf.version>4.0.0-rc-2</protobuf.version>
+    <jgrapht.version>1.5.2</jgrapht.version>  <!-- This is the latest version support JDK 8 -->
+    <failsafe.version>3.3.2</failsafe.version>
+    <argparse4j.version>0.9.0</argparse4j.version>
+    <cal10n.version>0.8.1</cal10n.version>
+    <jchardet.version>1.0</jchardet.version>
+    <juniversalchardet.version>1.0.3</juniversalchardet.version>
+    <quartz.version>2.5.0-rc1</quartz.version>
+    <ognl.version>3.4.2</ognl.version>
+    <ziplet.version>2.4.1</ziplet.version>
+    <progressbar.version>0.10.0</progressbar.version>
+    <unbescape.version>1.1.6.RELEASE</unbescape.version>
+    <micrometer.version>1.12.2</micrometer.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.protobuf</groupId>
+        <artifactId>protobuf-java</artifactId>
+        <version>${protobuf.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- JGraphT -->
+      <dependency>
+        <groupId>org.jgrapht</groupId>
+        <artifactId>jgrapht-core</artifactId>
+        <version>${jgrapht.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- misc -->
+      <dependency>
+        <groupId>dev.failsafe</groupId>
+        <artifactId>failsafe</artifactId>
+        <version>${failsafe.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>net.sourceforge.argparse4j</groupId>
+        <artifactId>argparse4j</artifactId>
+        <version>${argparse4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>me.tongfei</groupId>
+        <artifactId>progressbar</artifactId>
+        <version>${progressbar.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.unbescape</groupId>
+        <artifactId>unbescape</artifactId>
+        <version>${unbescape.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.github.ziplet</groupId>
+        <artifactId>ziplet</artifactId>
+        <version>${ziplet.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>net.sourceforge.jchardet</groupId>
+        <artifactId>jchardet</artifactId>
+        <version>${jchardet.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.googlecode.juniversalchardet</groupId>
+        <artifactId>juniversalchardet</artifactId>
+        <version>${juniversalchardet.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.cal10n</groupId>
+        <artifactId>cal10n-api</artifactId>
+        <version>${cal10n.version}</version>
+        <type>jar</type>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.quartz-scheduler</groupId>
+        <artifactId>quartz</artifactId>
+        <version>${quartz.version}</version>
+        <type>jar</type>
+        <scope>runtime</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>c3p0</groupId>
+            <artifactId>c3p0</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>ognl</groupId>
+        <artifactId>ognl</artifactId>
+        <version>${ognl.version}</version>
+        <type>jar</type>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.micrometer</groupId>
+        <artifactId>micrometer-registry-prometheus</artifactId>
+        <version>${micrometer.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

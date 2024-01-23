@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~    Copyright (c) 2017 - 2022.
+  ~    Nanjing Smart Medical Investment Operation Service Co. Ltd.
+  ~
+  ~    All rights reserved.
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ltd.qubit</groupId>
+    <artifactId>pom-meta</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>bom-multimedia</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>BOM of Multimedia Support</name>
+
+  <properties>
+    <thumbnailator.version>0.4.20</thumbnailator.version>
+    <humble-video.version>0.3.0</humble-video.version>
+    <soundlibs.mp3spi.version>1.9.5.4</soundlibs.mp3spi.version>
+    <soundlibs.vorbisspi.version>1.0.3.3</soundlibs.vorbisspi.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Generating thumbnails -->
+      <dependency>
+        <groupId>net.coobird</groupId>
+        <artifactId>thumbnailator</artifactId>
+        <version>${thumbnailator.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- video processing -->
+      <dependency>
+        <groupId>io.humble</groupId>
+        <artifactId>humble-video-all</artifactId>
+        <version>${humble-video.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- sound format -->
+      <dependency>
+        <groupId>com.googlecode.soundlibs</groupId>
+        <artifactId>mp3spi</artifactId>
+        <version>${soundlibs.mp3spi.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.googlecode.soundlibs</groupId>
+        <artifactId>vorbisspi</artifactId>
+        <version>${soundlibs.vorbisspi.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

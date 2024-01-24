@@ -23,15 +23,32 @@
   <name>BOM of JAXB</name>
 
   <properties>
-    <jakarta-jaxb-api.version>4.0.1</jakarta-jaxb-api.version>
-    <sun-jaxb-runtime.version>4.0.4</sun-jaxb-runtime.version>
     <javax-jaxb-api.version>2.4.0-b180830.0359</javax-jaxb-api.version>
+    <javax-activation-api.version>1.2.0</javax-activation-api.version>
+    <jakarta-jaxb-api.version>4.0.1</jakarta-jaxb-api.version>
+    <jakarta-activation-api.version>2.1.2</jakarta-activation-api.version>
+    <sun-jaxb-runtime.version>4.0.4</sun-jaxb-runtime.version>
     <glassfish-javax-jaxb-runtime.version>4.0.4</glassfish-javax-jaxb-runtime.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
-      <!-- Jakarta XML (JAXB) module -->
+      <!-- javax XML Binding (JAXB) module -->
+      <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>${javax-jaxb-api.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jaxb</groupId>
+        <artifactId>jaxb-runtime</artifactId>
+        <version>${glassfish-javax-jaxb-runtime.version}</version>
+        <type>jar</type>
+        <scope>runtime</scope>
+      </dependency>
+      <!-- Jakarta XML Binding (JAXB) module -->
       <dependency>
         <groupId>jakarta.xml.bind</groupId>
         <artifactId>jakarta.xml.bind-api</artifactId>
@@ -46,18 +63,19 @@
         <type>jar</type>
         <scope>runtime</scope>
       </dependency>
-      <!-- javax XML (JAXB) module -->
+      <!-- javax Activation module -->
       <dependency>
-        <groupId>javax.xml.bind</groupId>
-        <artifactId>jaxb-api</artifactId>
-        <version>${javax-jaxb-api.version}</version>
+        <groupId>javax.activation</groupId>
+        <artifactId>javax.activation-api</artifactId>
+        <version>${javax-activation-api.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
+      <!-- Jakarta Activation module -->
       <dependency>
-        <groupId>org.glassfish.jaxb</groupId>
-        <artifactId>jaxb-runtime</artifactId>
-        <version>${glassfish-javax-jaxb-runtime.version}</version>
+        <groupId>jakarta.activation</groupId>
+        <artifactId>jakarta.activation-api</artifactId>
+        <version>${jakarta-activation-api.version}</version>
         <type>jar</type>
         <scope>runtime</scope>
       </dependency>

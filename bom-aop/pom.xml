@@ -34,21 +34,21 @@
         <artifactId>aspectjrt</artifactId>
         <version>${aspectj.version}</version>
         <type>jar</type>
-        <scope>runtime</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.aspectj</groupId>
         <artifactId>aspectjweaver</artifactId>
         <version>${aspectj.version}</version>
         <type>jar</type>
-        <scope>runtime</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.aspectj</groupId>
         <artifactId>aspectjtools</artifactId>
         <version>${aspectj.version}</version>
         <type>jar</type>
-        <scope>runtime</scope>
+        <scope>compile</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>

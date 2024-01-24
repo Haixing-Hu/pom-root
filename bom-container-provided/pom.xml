@@ -29,8 +29,10 @@
     <jakarta-jsp-api.version>4.0.0-M1</jakarta-jsp-api.version>
     <javax-jstl.version>1.2</javax-jstl.version>
     <jakarta-jstl.version>3.0.0</jakarta-jstl.version>
-    <javax-el-api.version>3.0.1-b06</javax-el-api.version>
-    <jakarta-el-api.version>6.0.0-M2</jakarta-el-api.version>
+    <javax-el-api.version>3.0.0</javax-el-api.version>
+    <jakarta-el-api.version>5.0.0</jakarta-el-api.version>
+    <glassfish-javax-el-impl.version>3.0.0</glassfish-javax-el-impl.version>
+    <glassfish-jakarta-el-impl.version>5.0.0-M1</glassfish-jakarta-el-impl.version>
   </properties>
 
   <dependencyManagement>
@@ -89,11 +91,24 @@
         <scope>provided</scope>
       </dependency>
       <dependency>
+        <groupId>org.glassfish</groupId>
+        <artifactId>javax.el</artifactId>
+        <version>${glassfish-javax-el-impl.version}</version>
+        <type>jar</type>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
         <groupId>jakarta.el</groupId>
         <artifactId>jakarta.el-api</artifactId>
         <version>${jakarta-el-api.version}</version>
         <type>jar</type>
         <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish</groupId>
+        <artifactId>jakarta.el</artifactId>
+        <version>${glassfish-jakarta-el-impl.version}</version>
+        <scope>runtime</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>

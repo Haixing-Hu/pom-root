@@ -25,6 +25,8 @@
   <properties>
     <thumbnailator.version>0.4.20</thumbnailator.version>
     <humble-video.version>0.3.0</humble-video.version>
+    <tritonus.version>0.3.7.2</tritonus.version>
+    <tritonus-share.version>0.3.7.4</tritonus-share.version>
     <soundlibs.mp3spi.version>1.9.5.4</soundlibs.mp3spi.version>
     <soundlibs.vorbisspi.version>1.0.3.3</soundlibs.vorbisspi.version>
   </properties>
@@ -53,14 +55,29 @@
         <artifactId>mp3spi</artifactId>
         <version>${soundlibs.mp3spi.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.googlecode.soundlibs</groupId>
         <artifactId>vorbisspi</artifactId>
         <version>${soundlibs.vorbisspi.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
+      </dependency>
+      <!-- tritonus -->
+      <dependency>
+        <groupId>com.googlecode.soundlibs</groupId>
+        <artifactId>tritonus-share</artifactId>
+        <version>${tritonus-share.version}</version>
+        <type>jar</type>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.googlecode.soundlibs</groupId>
+        <artifactId>tritonus-all</artifactId>
+        <version>${tritonus.version}</version>
+        <type>jar</type>
+        <scope>runtime</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>

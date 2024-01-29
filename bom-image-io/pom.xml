@@ -33,91 +33,91 @@
         <artifactId>imageio-core</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-bmp</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-jpeg</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-tiff</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-tga</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-sgi</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-psd</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-pdf</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-pict</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-pcx</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-icns</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-hdr</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.twelvemonkeys.imageio</groupId>
         <artifactId>imageio-webp</artifactId>
         <version>${imageio.version}</version>
         <type>jar</type>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>

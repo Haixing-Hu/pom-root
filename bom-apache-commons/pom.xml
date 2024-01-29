@@ -50,9 +50,6 @@
     <commons.dbutils.version>1.8.1</commons.dbutils.version>
     <commons.proxy.version>1.0</commons.proxy.version>
     <commons.modeler.version>2.0.1</commons.modeler.version>
-
-    <httpcore.version>5.2.4</httpcore.version>
-    <httpclient.version>5.3</httpclient.version>
     <mina.version>3.0.0-M2</mina.version>
   </properties>
 
@@ -245,27 +242,6 @@
         <groupId>commons-modeler</groupId>
         <artifactId>commons-modeler</artifactId>
         <version>${commons.modeler.version}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-      </dependency>
-
-      <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpclient</artifactId>
-        <version>${httpclient.version}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-        <exclusions>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpcore</artifactId>
-        <version>${httpcore.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>

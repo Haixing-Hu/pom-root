@@ -88,6 +88,7 @@
     <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
     <project.home.url>https://github.com/Haixing-Hu</project.home.url>
+    <project.doc.directory>${project.basedir}/doc</project.doc.directory>
     <!-- default build suffix -->
     <build.suffix>-SNAPSHOT</build.suffix>
     <!-- default JVM options for testing is empty string -->

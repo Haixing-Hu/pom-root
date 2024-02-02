@@ -23,7 +23,7 @@
   <name>BOM of Logging</name>
 
   <properties>
-    <slf4j.version>2.0.3</slf4j.version>
+    <slf4j.version>2.0.7</slf4j.version>
     <logback.version>1.4.14</logback.version>
     <logback-android.version>3.0.0</logback-android.version>
     <log4j.version>3.0.0-beta1</log4j.version>

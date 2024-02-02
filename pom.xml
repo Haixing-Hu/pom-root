@@ -100,7 +100,6 @@
 
   <modules>
     <module>bom-ai</module>                         <!-- inherit from pom-meta -->
-    <module>bom-android</module>                    <!-- inherit from pom-meta -->
     <module>bom-annotation</module>                 <!-- inherit from pom-meta -->
     <module>bom-aop</module>                        <!-- inherit from pom-meta -->
     <module>bom-apache-commons</module>             <!-- inherit from pom-meta -->
@@ -109,7 +108,6 @@
     <module>bom-container-provided</module>         <!-- inherit from pom-meta -->
     <module>bom-crawler</module>                    <!-- inherit from pom-meta -->
     <module>bom-database-connection-poll</module>   <!-- inherit from pom-meta -->
-    <module>bom-database-driver</module>            <!-- inherit from pom-meta -->
     <module>bom-html</module>                       <!-- inherit from pom-meta -->
     <module>bom-httpclient</module>                 <!-- inherit from pom-meta -->
     <module>bom-image-io</module>                   <!-- inherit from pom-meta -->
@@ -130,6 +128,7 @@
     <module>bom-testing</module>                    <!-- inherit from pom-meta -->
     <module>bom-third-part</module>                 <!-- inherit from pom-meta -->
     <module>bom-validation</module>                 <!-- inherit from pom-meta -->
+    <module>bom-database-driver</module>            <!-- inherit from pom-meta -->
     <module>bom-tool</module>                       <!-- inherit from bom-database-driver -->
     <module>pom-dependency</module>                 <!-- inherit from bom-tool -->
     <module>pom-internal</module>                   <!-- inherit from pom-dependency -->

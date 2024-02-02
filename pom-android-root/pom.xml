@@ -23,18 +23,108 @@
   <version>4.0.0-SNAPSHOT</version>
   <name>Parent POM of Android Projects</name>
 
-  <properties>
+  <repositories>
+    <repository>
+      <id>google</id>
+      <name>Google Repository</name>
+      <url>https://maven.google.com/</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 
+  <properties>
+    <android.version>8.0.0_r2</android.version>
+    <android.sdk.version>26</android.sdk.version>
+    <androidx-annotation.version>1.7.1</androidx-annotation.version>
+    <androidx-core.version>1.12.0</androidx-core.version>
+    <androidx-appcompat.version>1.6.0</androidx-appcompat.version>
+    <android.lifecycle-common.version>2.5.1</android.lifecycle-common.version>
+    <android-maven-plugin.version>4.6.0</android-maven-plugin.version>
+    <javax-jaxb.version>2.3.1</javax-jaxb.version>
   </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.simpligility.maven.plugins</groupId>
+          <artifactId>android-maven-plugin</artifactId>
+          <version>${android-maven-plugin.version}</version>
+          <extensions>true</extensions>
+          <configuration>
+            <failOnNonStandardStructure>false</failOnNonStandardStructure>
+            <sdk>
+              <platform>${android.sdk.version}</platform>
+            </sdk>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>javax.xml.bind</groupId>
+              <artifactId>jaxb-api</artifactId>
+              <version>${javax-jaxb.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.glassfish.jaxb</groupId>
+              <artifactId>jaxb-runtime</artifactId>
+              <version>${javax-jaxb.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>ltd.qubit</groupId>
-        <artifactId>bom-android</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-        <type>pom</type>
-        <scope>import</scope>
+        <groupId>androidx.annotation</groupId>
+        <artifactId>annotation</artifactId>
+        <version>${androidx-annotation.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>androidx.core</groupId>
+        <artifactId>core</artifactId>
+        <version>${androidx-core.version}</version>
+        <type>aar</type>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>androidx.appcompat</groupId>
+        <artifactId>appcompat</artifactId>
+        <version>${androidx-appcompat.version}</version>
+        <type>aar</type>
+        <scope>provided</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>androidx.lifecycle</groupId>
+            <artifactId>lifecycle-common</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>androidx.lifecycle</groupId>
+        <artifactId>lifecycle-common</artifactId>
+        <version>${android.lifecycle-common.version}</version>
+        <type>jar</type>
+        <scope>provided</scope>
+      </dependency>
+      <!-- Android SDK -->
+      <!-- see https://github.com/Haixing-Hu/maven-android-sdk-deployer -->
+      <dependency>
+        <groupId>android</groupId>
+        <artifactId>android</artifactId>
+        <version>${android.version}</version>
+        <type>jar</type>
+        <scope>provided</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>

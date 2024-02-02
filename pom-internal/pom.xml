@@ -29,17 +29,21 @@
     <common-annotation.version>2.2.0</common-annotation.version>
     <common-java.version>4.2.0</common-java.version>
     <common-random.version>4.2.0</common-random.version>
-    <common-test.version>4.2.0</common-test.version>
+    <common-unit-test.version>4.3.0</common-unit-test.version>
+    <common-integration-test.version>4.3.0</common-integration-test.version>
     <common-id.version>2.3.0</common-id.version>
     <common-validator.version>1.2.0</common-validator.version>
     <common-aspect.version>1.2.0</common-aspect.version>
-    <common-mime.version>1.1.0</common-mime.version>
+    <common-mime.version>2.0.0</common-mime.version>
+    <common-mybatis.version>0.1.0</common-mybatis.version>
+    <common-spring.version>0.1.0</common-spring.version>
+    <common-error.version>0.1.0</common-error.version>
     <common-dao.version>1.1.0</common-dao.version>
     <common-service.version>1.1.0</common-service.version>
     <common-model.version>4.2.0</common-model.version>
-    <common-core.version>4.2.0</common-core.version>
     <common-core-ng.version>4.2.0</common-core-ng.version>
-    <common-tool.version>2.2.0</common-tool.version>
+
+    <checkstyle-rule.version>2.1.0</checkstyle-rule.version>
   </properties>
 
   <dependencyManagement>
@@ -68,8 +72,15 @@
       </dependency>
       <dependency>
         <groupId>ltd.qubit</groupId>
-        <artifactId>common-test</artifactId>
-        <version>${common-test.version}${build.suffix}</version>
+        <artifactId>common-unit-test</artifactId>
+        <version>${common-unit-test.version}${build.suffix}</version>
+        <type>jar</type>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>ltd.qubit</groupId>
+        <artifactId>common-integration-test</artifactId>
+        <version>${common-integration-test.version}${build.suffix}</version>
         <type>jar</type>
         <scope>test</scope>
       </dependency>
@@ -110,6 +121,27 @@
       </dependency>
       <dependency>
         <groupId>ltd.qubit</groupId>
+        <artifactId>common-spring</artifactId>
+        <version>${common-spring.version}${build.suffix}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>ltd.qubit</groupId>
+        <artifactId>common-mybatis</artifactId>
+        <version>${common-mybatis.version}${build.suffix}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>ltd.qubit</groupId>
+        <artifactId>common-error</artifactId>
+        <version>${common-error.version}${build.suffix}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>ltd.qubit</groupId>
         <artifactId>common-dao</artifactId>
         <version>${common-dao.version}${build.suffix}</version>
         <type>jar</type>
@@ -124,22 +156,8 @@
       </dependency>
       <dependency>
         <groupId>ltd.qubit</groupId>
-        <artifactId>common-tool</artifactId>
-        <version>${common-tool.version}${build.suffix}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-      </dependency>
-      <dependency>
-        <groupId>ltd.qubit</groupId>
         <artifactId>common-model</artifactId>
         <version>${common-model.version}${build.suffix}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-      </dependency>
-      <dependency>
-        <groupId>ltd.qubit</groupId>
-        <artifactId>common-core</artifactId>
-        <version>${common-core.version}${build.suffix}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>

@@ -56,7 +56,7 @@
         </plugins>
       </reporting>
     </profile>
-    <!-- The profile for generating the javadoc; set -Djavadoc to active the profile -->
+    <!-- The profile for generating and attach the javadoc; set -Djavadoc to active the profile -->
     <profile>
       <id>javadoc</id>
       <activation>
@@ -102,6 +102,23 @@
           </plugin>
         </plugins>
       </reporting>
+    </profile>
+    <!-- The profile for generating and attach the java source; set -Dsource to active the profile -->
+    <profile>
+      <id>javasource</id>
+      <activation>
+        <property>
+          <name>source</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
     <!-- The profile for performing the spotbugs static analysis; set -Dspotbugs to active the profile -->
     <profile>

@@ -68,6 +68,7 @@
     <swagger-codegen-maven-plugin.version>3.0.21</swagger-codegen-maven-plugin.version>
     <flyway-maven-plugin.version>${flyway.version}</flyway-maven-plugin.version>   <!-- 不要升级！flyway > 7.15.0 不再支持 MySQL 5.7 -->
     <mariadb4j-maven-plugin.version>${mariadb4j.version}</mariadb4j-maven-plugin.version>
+    <depgraph-maven-plugin.version>4.0.3</depgraph-maven-plugin.version>
   </properties>
 
   <build>
@@ -505,7 +506,6 @@
           <artifactId>taglist-maven-plugin</artifactId>
           <version>${taglist-maven-plugin.version}</version>
           <configuration>
-            <encoding>${project.encoding}</encoding>
             <tagListOptions>
               <tagClasses>
                 <tagClass>
@@ -616,7 +616,7 @@
               <version>${h2.version}</version>
             </dependency>
             <dependency>
-              <groupId>mysql</groupId>
+              <groupId>com.mysql</groupId>
               <artifactId>mysql-connector-j</artifactId>
               <version>${mysql-connector-j.version}</version>
             </dependency>
@@ -680,6 +680,21 @@
               </configuration>
             </execution>
           </executions>
+        </plugin>
+        <!-- configuration of the depgraph-maven-plugin, which generates dependency graphs -->
+        <plugin>
+          <groupId>com.github.ferstl</groupId>
+          <artifactId>depgraph-maven-plugin</artifactId>
+          <version>${depgraph-maven-plugin.version}</version>
+          <configuration>
+            <showDuplicates>true</showDuplicates>
+            <showGroupIds>true</showGroupIds>
+            <createImage>true</createImage>
+            <graphFormat>dot</graphFormat>
+            <imageFormat>png</imageFormat>
+            <includes>ltd.qubit</includes>
+            <outputDirectory>${project.doc.directory}</outputDirectory>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>

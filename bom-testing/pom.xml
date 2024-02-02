@@ -38,6 +38,7 @@
     <json-unit.version>3.2.2</json-unit.version>
     <junit-jupiter.version>5.10.1</junit-jupiter.version>
     <testcontainers.version>1.19.3</testcontainers.version>
+    <mockwebserver.version>4.12.0</mockwebserver.version>
   </properties>
 
   <dependencyManagement>
@@ -253,12 +254,6 @@
         <version>${json-unit.version}</version>
         <type>jar</type>
         <scope>test</scope>
-        <exclusions>
-          <exclusion>
-            <groupId>com.jayway.jsonpath</groupId>
-            <artifactId>json-path</artifactId>
-          </exclusion>
-        </exclusions>
       </dependency>
       <dependency>
         <groupId>net.javacrumbs.json-unit</groupId>
@@ -386,6 +381,13 @@
         <groupId>org.testcontainers</groupId>
         <artifactId>selenium</artifactId>
         <version>${testcontainers.version}</version>
+        <type>jar</type>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>mockwebserver</artifactId>
+        <version>${mockwebserver.version}</version>
         <type>jar</type>
         <scope>test</scope>
       </dependency>

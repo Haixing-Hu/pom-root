@@ -82,7 +82,7 @@
 
   <properties>
     <!-- General configuration constants -->
-    <jdk.version>11</jdk.version>
+    <jdk.version>17</jdk.version>
     <jdk.javadoc.link>https://docs.oracle.com/javase/${jdk.version}/docs/api/</jdk.javadoc.link>
     <project.encoding>UTF-8</project.encoding>
     <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>

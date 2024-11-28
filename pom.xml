@@ -37,6 +37,17 @@
     <url>${project.home.url}/${project.artifactId}/issues</url>
   </issueManagement>
 
+  <distributionManagement>
+    <repository>
+      <id>qubit-releases</id>
+      <url>https://maven.qubit.ltd/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>qubit-snapshots</id>
+      <url>https://maven.qubit.ltd/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <repositories>
     <repository>
       <id>qubit-releases</id>

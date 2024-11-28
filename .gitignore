@@ -13,11 +13,9 @@ tasks.xml
 
 # Maven versions plugin
 **/*/pom.xml.versionsBackup
-pom.xml.versionsBackup
 
 # maven flatten plugin
 **/*/.flattened-pom.xml
-.flattened-pom.xml
 
 # Binary Files
 *.ear

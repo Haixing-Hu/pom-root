@@ -26,7 +26,7 @@
     <slf4j.version>2.0.7</slf4j.version>
     <logback.version>1.4.14</logback.version>
     <logback-android.version>3.0.0</logback-android.version>
-    <log4j.version>3.0.0-beta1</log4j.version>
+    <log4j.version>2.23.1</log4j.version>
   </properties>
 
   <dependencyManagement>
@@ -135,6 +135,13 @@
       <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-to-slf4j</artifactId>
+        <version>${log4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-slf4j2-impl</artifactId>
         <version>${log4j.version}</version>
         <type>jar</type>
         <scope>compile</scope>

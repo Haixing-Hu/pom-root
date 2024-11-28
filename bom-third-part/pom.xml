@@ -96,6 +96,12 @@
         <version>${aliyun-sdk-oss.version}</version>
         <type>jar</type>
         <scope>compile</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
     </dependencies>
   </dependencyManagement>

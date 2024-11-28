@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~
-  ~    Copyright (c) 2022 - 2023.
+  ~    Copyright (c) 2022 - 2024.
   ~    Haixing Hu, Qubit Co. Ltd.
   ~
   ~    All rights reserved.
@@ -19,8 +19,8 @@
   <url>${project.home.url}/pom-root</url>
 
   <organization>
-    <name>Haixing Hu</name>
-    <url>https://github.com/Haixing-Hu/</url>
+    <name>Qubit Co. Ltd.</name>
+    <url>https://qubit.ltd/</url>
   </organization>
 
   <licenses>
@@ -37,13 +37,76 @@
     <url>${project.home.url}/${project.artifactId}/issues</url>
   </issueManagement>
 
+  <repositories>
+    <repository>
+      <id>qubit-releases</id>
+      <name>Qubit Maven Release Repository</name>
+      <url>https://maven.qubit.ltd/releases</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>qubit-snapshots</id>
+      <name>Qubit Snapshot Repository</name>
+      <url>https://maven.qubit.ltd/snapshots</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>aliyun</id>
+      <name>AliYun Maven Repository</name>
+      <url>https://maven.aliyun.com/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
   <profiles>
-    <!-- Release Build -->
+    <profile>
+      <id>dev</id>
+      <properties>
+        <build.suffix>-SNAPSHOT</build.suffix>
+        <environment>dev</environment>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    <profile>
+      <id>stage</id>
+      <properties>
+        <build.suffix>-SNAPSHOT</build.suffix>
+        <environment>stage</environment>
+      </properties>
+    </profile>
+    <profile>
+      <id>test</id>
+      <properties>
+        <build.suffix>-SNAPSHOT</build.suffix>
+        <environment>test</environment>
+      </properties>
+    </profile>
     <profile>
       <id>release</id>
       <properties>
-        <!-- no -SNAPSHOT suffix -->
-        <build.suffix></build.suffix>
+        <build.suffix></build.suffix>    <!-- no -SNAPSHOT suffix for release build -->
+        <environment>prod</environment>
       </properties>
     </profile>
     <!-- Disable the javadoc lint for JDK8+ -->
@@ -75,7 +138,8 @@
         <jdk>[9,17)</jdk>
       </activation>
       <properties>
-        <test.jvm.options>--illegal-access=permit</test.jvm.options>
+        <jvm.options>--illegal-access=permit --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED</jvm.options>
+        <test.jvm.options>--illegal-access=permit --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED</test.jvm.options>
       </properties>
     </profile>
   </profiles>
@@ -108,9 +172,10 @@
     <module>bom-cache</module>                      <!-- inherit from pom-meta -->
     <module>bom-container-provided</module>         <!-- inherit from pom-meta -->
     <module>bom-crawler</module>                    <!-- inherit from pom-meta -->
-    <module>bom-database-connection-poll</module>   <!-- inherit from pom-meta -->
+    <module>bom-database-connection-pool</module>   <!-- inherit from pom-meta -->
+    <module>bom-database-driver</module>            <!-- inherit from pom-meta -->
     <module>bom-html</module>                       <!-- inherit from pom-meta -->
-    <module>bom-httpclient</module>                 <!-- inherit from pom-meta -->
+    <module>bom-http</module>                       <!-- inherit from pom-meta -->
     <module>bom-image-io</module>                   <!-- inherit from pom-meta -->
     <module>bom-jaxb</module>                       <!-- inherit from pom-meta -->
     <module>bom-json</module>                       <!-- inherit from pom-meta -->
@@ -128,9 +193,9 @@
     <module>bom-spring</module>                     <!-- inherit from pom-meta -->
     <module>bom-testing</module>                    <!-- inherit from pom-meta -->
     <module>bom-third-part</module>                 <!-- inherit from pom-meta -->
-    <module>bom-validation</module>                 <!-- inherit from pom-meta -->
-    <module>bom-database-driver</module>            <!-- inherit from pom-meta -->
     <module>bom-tool</module>                       <!-- inherit from bom-database-driver -->
+    <module>bom-validation</module>                 <!-- inherit from pom-meta -->
+    <module>bom-rule-engine</module>                <!-- inherit from pom-meta -->
     <module>pom-dependency</module>                 <!-- inherit from bom-tool -->
     <module>pom-internal</module>                   <!-- inherit from pom-dependency -->
     <module>pom-maven-plugin</module>               <!-- inherit from pom-internal -->

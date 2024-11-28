@@ -31,10 +31,10 @@
     <maven-install-plugin.version>3.1.1</maven-install-plugin.version>
     <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
     <!-- NOTE: maven-javadoc-plugin > v3.2.0 has a bug in JDK 8, which reports MalformedInputException -->
-    <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
+    <maven-javadoc-plugin.version>3.7.0</maven-javadoc-plugin.version>
     <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
     <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
-    <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
+    <maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
     <maven-assembly-plugin.version>2.6</maven-assembly-plugin.version>
     <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
     <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
@@ -47,6 +47,7 @@
     <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
     <maven-help-plugin.version>3.4.0</maven-help-plugin.version>
     <maven-project-info-plugin.version>3.5.0</maven-project-info-plugin.version>
+    <build-helper-maven-plugin.version>3.5.0</build-helper-maven-plugin.version>
     <dependency-check-maven.version>9.0.9</dependency-check-maven.version>
     <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
     <jetty-maven-plugin.version>11.0.19</jetty-maven-plugin.version>
@@ -74,6 +75,12 @@
   <build>
     <pluginManagement>
       <plugins>
+        <!-- configuration of dependency plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>${maven-dependency-plugin.version}</version>
+        </plugin>
         <!-- configuration of maven enforcer plugin -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -138,7 +145,7 @@
             <target>${jdk.version}</target>
             <compilerVersion>${jdk.version}</compilerVersion>
             <encoding>${project.encoding}</encoding>
-            <optimize>true</optimize>
+            <!-- <optimize>true</optimize> --> <!-- optimize option is deprecated in higher JDK -->
             <compilerArgs>
               <arg>-Xlint:all,-processing</arg>  <!-- 去除有关与注释处理相关的问题的警告：No processor claimed any of these annotations -->
               <arg>${maven.compiler.args}</arg>
@@ -155,7 +162,7 @@
             <encoding>${project.encoding}</encoding>
             <docencoding>${project.encoding}</docencoding>
             <!-- reduce console output. Can override with -Dquiet=false -->
-            <quiet>true</quiet>
+            <quiet>false</quiet>
             <failOnError>true</failOnError>
             <failOnWarnings>false</failOnWarnings>
             <doclint>none</doclint>
@@ -174,7 +181,7 @@
             </execution>
           </executions>
         </plugin>
-        <!-- configuration of the source plugin -->
+        <!-- configuration of the source plugin to attach the sources and test sources -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
@@ -185,6 +192,7 @@
               <phase>verify</phase>
               <goals>
                 <goal>jar-no-fork</goal>
+                <goal>test-jar-no-fork</goal>
               </goals>
             </execution>
           </executions>
@@ -194,6 +202,19 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
           <version>${maven-resources-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>default-resources</id>
+              <phase>process-resources</phase>
+              <goals>
+                <goal>resources</goal>
+              </goals>
+              <configuration>
+                <!-- 必须将 includeEmptyDirs 设置为 true，以便在没有任何代码时，依然可以生成目标目录并复制资源 -->
+                <includeEmptyDirs>true</includeEmptyDirs>
+              </configuration>
+            </execution>
+          </executions>
           <configuration>
             <encoding>${project.encoding}</encoding>
             <propertiesEncoding>${project.encoding}</propertiesEncoding>

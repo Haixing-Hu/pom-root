@@ -23,7 +23,7 @@
   <name>BOM of Database Drivers</name>
 
   <properties>
-    <mysql-connector-j.version>8.2.0</mysql-connector-j.version>
+    <mysql-connector-j.version>8.4.0</mysql-connector-j.version>
     <mysql-connector-mxj.version>5.0.12</mysql-connector-mxj.version>
     <ms-sqlserver.version>12.5.0.jre11-preview</ms-sqlserver.version>
     <ojdbc10.version>19.21.0.0</ojdbc10.version>

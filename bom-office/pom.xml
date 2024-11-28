@@ -27,6 +27,7 @@
     <jxls.version>2.14.0</jxls.version>
     <jxls-jexcel.version>1.0.9</jxls-jexcel.version>
     <jxls-reader.version>2.1.0</jxls-reader.version>
+    <easyexcel.version>3.3.4</easyexcel.version>
   </properties>
 
   <dependencyManagement>
@@ -79,6 +80,13 @@
         <groupId>org.jxls</groupId>
         <artifactId>jxls-reader</artifactId>
         <version>${jxls-reader.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>easyexcel</artifactId>
+        <version>${easyexcel.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>

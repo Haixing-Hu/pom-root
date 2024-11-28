@@ -24,7 +24,7 @@
   <name>BOM of Tools</name>
 
   <properties>
-    <antlr4.version>4.13.1</antlr4.version>
+    <antlr4.version>4.13.0</antlr4.version>
     <springfox-swagger2.version>3.0.0</springfox-swagger2.version>
     <checkstyle.version>10.12.7</checkstyle.version>
     <spotbugs.version>4.8.3</spotbugs.version>

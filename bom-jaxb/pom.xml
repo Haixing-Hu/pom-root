@@ -28,6 +28,7 @@
     <jakarta-jaxb-api.version>4.0.1</jakarta-jaxb-api.version>
     <jakarta-activation-api.version>2.1.2</jakarta-activation-api.version>
     <sun-jaxb-runtime.version>4.0.4</sun-jaxb-runtime.version>
+    <sun-activation.version>2.0.1</sun-activation.version>
     <glassfish-javax-jaxb-runtime.version>4.0.4</glassfish-javax-jaxb-runtime.version>
   </properties>
 
@@ -76,6 +77,13 @@
         <groupId>jakarta.activation</groupId>
         <artifactId>jakarta.activation-api</artifactId>
         <version>${jakarta-activation-api.version}</version>
+        <type>jar</type>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.sun.activation</groupId>
+        <artifactId>jakarta.activation</artifactId>
+        <version>${sun-activation.version}</version>
         <type>jar</type>
         <scope>runtime</scope>
       </dependency>

@@ -25,6 +25,7 @@
   <properties>
     <javacv.version>1.5.7</javacv.version>
     <tess4j.version>4.5.4</tess4j.version>
+    <langchain4j.version>0.31.0</langchain4j.version>
   </properties>
 
   <dependencyManagement>
@@ -42,6 +43,178 @@
         <groupId>net.sourceforge.tess4j</groupId>
         <artifactId>tess4j</artifactId>
         <version>${tess4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- LangChain4j -->
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-core</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-spring</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>pom</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- LangChain4j LLM Provider -->
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-open-ai</artifactId>  <!-- OpenAI ChatGPT LLM -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-azure-open-ai</artifactId>  <!-- OpenAI ChatGPT LLM on Microsoft Azure -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-anthropic</artifactId>  <!-- Anthropic Claude LLM -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-ollama</artifactId>  <!-- Ollama  -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-mistral-ai</artifactId> <!-- Mistral LLM -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-vertex-ai</artifactId>  <!-- Google Vertex AI PaLM 2 -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-vertex-ai-gemini</artifactId> <!-- Google Vertex AI Gemini -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-zhipu-ai</artifactId> <!-- 智谱AI大模型 -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-chatglm</artifactId>  <!-- 智谱 ChatGLM -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-qianfan</artifactId>  <!-- 百度智能云千帆大模型 -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-hugging-face</artifactId> <!-- HuggingFace Inference API -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-local-ai</artifactId> <!-- Local AI -->
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- LangChain4j Embedding -->
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-embeddings</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-embeddings-bge-small-zh-v15</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-embeddings-bge-small-en-v15</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <!-- LangChain4j Vector Store -->
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-qdrant</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-milvus</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-pinecone</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-neo4j</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-pgvector</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-chroma</artifactId>
+        <version>${langchain4j.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>

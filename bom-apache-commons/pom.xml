@@ -31,7 +31,7 @@
     <commons.text.version>1.11.0</commons.text.version>
     <commons.codec.version>1.16.0</commons.codec.version>
     <commons.math.version>3.6.1</commons.math.version>
-    <commons.compress.version>1.25.0</commons.compress.version>
+    <commons.compress.version>1.26.0</commons.compress.version>
     <commons.pool.version>2.12.0</commons.pool.version>
     <commons.beanutils.version>1.9.4</commons.beanutils.version>
     <commons.cli.version>1.6.0</commons.cli.version>

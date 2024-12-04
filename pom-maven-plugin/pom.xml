@@ -189,11 +189,21 @@
           <executions>
             <execution>
               <id>attach-sources</id>
-              <phase>verify</phase>
+              <phase>package</phase>
               <goals>
                 <goal>jar-no-fork</goal>
                 <goal>test-jar-no-fork</goal>
               </goals>
+              <configuration>
+                <!-- include only main sources and resources -->
+                <includes>
+                  <include>**/src/main/**</include>
+                </includes>
+                <!-- exclude test sources and resources -->
+                <excludes>
+                  <exclude>**/src/test/**</exclude>
+                </excludes>
+              </configuration>
             </execution>
           </executions>
         </plugin>

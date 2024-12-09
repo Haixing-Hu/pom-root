@@ -153,6 +153,26 @@
         <test.jvm.options>--illegal-access=permit --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED</test.jvm.options>
       </properties>
     </profile>
+    <!-- deploy to njzhyl repository -->
+    <profile>
+      <id>deploy-to-njzhyl</id>
+      <activation>
+        <property>
+          <name>njzhyl</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <distributionManagement>
+        <repository>
+          <id>njzhyl-releases</id>
+          <url>https://nexus.njzhyl.cn/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+          <id>njzhyl-snapshots</id>
+          <url>https://nexus.njzhyl.cn/repository/maven-snapshots/</url>
+        </snapshotRepository>
+      </distributionManagement>
+    </profile>
   </profiles>
 
   <properties>

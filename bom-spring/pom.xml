@@ -23,11 +23,11 @@
   <name>BOM of Spring</name>
 
   <properties>
-    <spring-framework.version>6.2.0</spring-framework.version>
-    <spring-security.version>6.4.1</spring-security.version>
-    <spring-integration.version>6.4.0</spring-integration.version>
-    <spring-data.version>3.4.0</spring-data.version>
-    <spring-data-mongodb.version>4.4.0</spring-data-mongodb.version>
+    <spring-framework.version>6.2.1</spring-framework.version>
+    <spring-security.version>6.4.2</spring-security.version>
+    <spring-integration.version>6.4.1</spring-integration.version>
+    <spring-data.version>3.4.1</spring-data.version>
+    <spring-data-mongodb.version>4.4.1</spring-data-mongodb.version>
     <spring-data-elasticsearch.version>5.4.0</spring-data-elasticsearch.version>
     <spring-data-neo4j.version>7.4.0</spring-data-neo4j.version>
     <spring-data-cassandra.version>4.4.0</spring-data-cassandra.version>

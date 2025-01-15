@@ -38,10 +38,11 @@
     <common-mybatis.version>0.1.0</common-mybatis.version>
     <common-spring.version>0.1.0</common-spring.version>
     <common-error.version>1.0.0</common-error.version>
+    <common-model.version>4.4.0</common-model.version>
+    <common-database.version>4.4.0</common-database.version>
+    <common-core.version>4.4.0</common-core.version>
     <common-dao.version>1.2.0</common-dao.version>
     <common-service.version>1.2.0</common-service.version>
-    <common-model.version>4.3.0</common-model.version>
-    <common-core.version>4.4.0</common-core.version>
     <common-tool.version>2.2.0</common-tool.version>
 
     <common-test.version>4.2.0</common-test.version>    <!-- 已废弃，拆分为 common-unit-test 和 common-integration-test -->

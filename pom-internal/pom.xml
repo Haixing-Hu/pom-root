@@ -194,6 +194,20 @@
       </dependency>
       <dependency>
         <groupId>ltd.qubit</groupId>
+        <artifactId>common-model</artifactId>
+        <version>${common-model.version}${build.suffix}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>ltd.qubit</groupId>
+        <artifactId>common-database</artifactId>
+        <version>${common-database.version}${build.suffix}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>ltd.qubit</groupId>
         <artifactId>common-dao</artifactId>
         <version>${common-dao.version}${build.suffix}</version>
         <type>jar</type>
@@ -210,13 +224,6 @@
         <groupId>ltd.qubit</groupId>
         <artifactId>common-tool</artifactId>
         <version>${common-tool.version}${build.suffix}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-      </dependency>
-      <dependency>
-        <groupId>ltd.qubit</groupId>
-        <artifactId>common-model</artifactId>
-        <version>${common-model.version}${build.suffix}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>

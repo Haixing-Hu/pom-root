@@ -114,6 +114,13 @@
       </properties>
     </profile>
     <profile>
+      <id>prod</id>
+      <properties>
+        <build.suffix></build.suffix>    <!-- no -SNAPSHOT suffix for release build -->
+        <environment>prod</environment>
+      </properties>
+    </profile>
+    <profile>
       <id>release</id>
       <properties>
         <build.suffix></build.suffix>    <!-- no -SNAPSHOT suffix for release build -->

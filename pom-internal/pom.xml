@@ -38,9 +38,9 @@
     <common-mybatis.version>0.2.0</common-mybatis.version>
     <common-spring.version>0.2.0</common-spring.version>
     <common-error.version>1.2.0</common-error.version>
-    <common-model.version>4.5.0</common-model.version>
-    <common-database.version>4.5.0</common-database.version>
-    <common-core.version>4.5.0</common-core.version>
+    <common-model.version>4.6.0</common-model.version>
+    <common-database.version>4.6.0</common-database.version>
+    <common-core.version>4.6.0</common-core.version>
     <common-dao.version>1.3.1</common-dao.version>
     <common-service.version>1.3.0</common-service.version>
     <common-tool.version>2.3.0</common-tool.version>

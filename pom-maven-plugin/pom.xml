@@ -163,6 +163,7 @@
             <docencoding>${project.encoding}</docencoding>
             <!-- reduce console output. Can override with -Dquiet=false -->
             <quiet>false</quiet>
+            <verbose>true</verbose>
             <failOnError>true</failOnError>
             <failOnWarnings>false</failOnWarnings>
             <doclint>none</doclint>
@@ -191,19 +192,8 @@
               <id>attach-sources</id>
               <phase>package</phase>
               <goals>
-                <goal>jar-no-fork</goal>
-                <goal>test-jar-no-fork</goal>
+                <goal>jar</goal>
               </goals>
-              <configuration>
-                <!-- include only main sources and resources -->
-                <includes>
-                  <include>**/src/main/**</include>
-                </includes>
-                <!-- exclude test sources and resources -->
-                <excludes>
-                  <exclude>**/src/test/**</exclude>
-                </excludes>
-              </configuration>
             </execution>
           </executions>
         </plugin>

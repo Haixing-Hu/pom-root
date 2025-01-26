@@ -77,14 +77,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
-            <configuration>
-              <charset>${project.encoding}</charset>
-              <encoding>${project.encoding}</encoding>
-              <docencoding>${project.encoding}</docencoding>
-              <!-- reduce console output. Can override with -Dquiet=false -->
-              <quiet>false</quiet>
-              <verbose>true</verbose>
-            </configuration>
             <reportSets>
               <reportSet>
                 <reports>

@@ -52,10 +52,10 @@ for module in $(cat ${MODULE_LIST_FILE}); do
     module_dir="${PROJECT_HOME}/${module}";
     if [ -f "${module_dir}/pom.xml" ]; then
         cd "${module_dir}";
-        LOG_FILE="${LOG_DIR}/${module_name}.mvn-install.log";
         echo "Updating ${module} ...";
         git pull;
         echo "Deploying snapshot version of ${module} to maven.qubit.ltd ...";
+        LOG_FILE="${LOG_DIR}/${module_name}.mvn-deploy.qubit.snapshot.log";
         if mvn clean deploy -DskipTests &> "${LOG_FILE}"; then
             echo "Deploy snapshot version of ${module} to maven.qubit.ltd successfully.";
         else
@@ -64,6 +64,7 @@ for module in $(cat ${MODULE_LIST_FILE}); do
             exit -1;
         fi
         echo "Deploying release version of ${module} to maven.qubit.ltd ...";
+        LOG_FILE="${LOG_DIR}/${module_name}.mvn-deploy.qubit.release.log";
         if mvn clean deploy -Prelease -DskipTests -Djavadoc -Dsource &> "${LOG_FILE}"; then
             echo "Deploy release version of ${module} to maven.qubit.ltd successfully.";
         else
@@ -72,6 +73,7 @@ for module in $(cat ${MODULE_LIST_FILE}); do
             exit -1;
         fi
         echo "Deploying snapshot version of ${module} to nexus.njzhyl.cn ...";
+        LOG_FILE="${LOG_DIR}/${module_name}.mvn-deploy.njzhyl.snapshot.log";
         if mvn clean deploy -DskipTests -Dnjzhyl=true &> "${LOG_FILE}"; then
             echo "Deploy snapshot version ${module} to nexus.njzhyl.cn successfully.";
         else
@@ -80,6 +82,7 @@ for module in $(cat ${MODULE_LIST_FILE}); do
             exit -1;
         fi
         echo "Deploying release version of ${module} to nexus.njzhyl.cn ...";
+        LOG_FILE="${LOG_DIR}/${module_name}.mvn-deploy.njzhyl.release.log";
         if mvn clean deploy -Prelease -DskipTests -Dnjzhyl=true &> "${LOG_FILE}"; then
             echo "Deploy release version of ${module} to nexus.njzhyl.cn successfully.";
         else

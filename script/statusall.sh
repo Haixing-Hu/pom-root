@@ -24,10 +24,12 @@ done
 THIS_DIR=$(dirname "$THIS");
 cd "${THIS_DIR}";
 THIS_DIR=$(pwd);
-cd "${THIS_DIR}/../../..";
+cd "${THIS_DIR}/../..";
 PROJECT_HOME=$(pwd);
 
 echo "";
+echo "-----------------------------------------------------";
+echo "PROJECT_HOME = ${PROJECT_HOME}"
 echo "-----------------------------------------------------";
 echo "";
 PROJECT_LIST_FILE="${THIS_DIR}/project-list.txt";

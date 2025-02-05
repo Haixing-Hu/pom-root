@@ -40,7 +40,7 @@
     <common-error.version>1.3.0</common-error.version>
     <common-model.version>4.11.0</common-model.version>
     <common-database.version>4.7.0</common-database.version>
-    <common-core.version>4.14.0</common-core.version>
+    <common-core.version>4.14.1</common-core.version>
     <common-dao.version>1.5.0</common-dao.version>
     <common-service.version>1.6.0</common-service.version>
     <common-tool.version>2.3.0</common-tool.version>

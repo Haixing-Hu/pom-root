@@ -41,8 +41,8 @@
     <common-model.version>4.13.1</common-model.version>
     <common-database.version>4.7.0</common-database.version>
     <common-core.version>4.18.2</common-core.version>
-    <common-dao.version>1.6.0</common-dao.version>
-    <common-service.version>1.7.0</common-service.version>
+    <common-dao.version>1.6.1</common-dao.version>
+    <common-service.version>1.7.1</common-service.version>
     <common-tool.version>2.3.0</common-tool.version>
 
     <iot-box.version>2.1.0</iot-box.version>

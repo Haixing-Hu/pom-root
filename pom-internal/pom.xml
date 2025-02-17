@@ -27,7 +27,7 @@
     <!-- version numbers of our internal modules -->
     <pom-root.version>3.2.0</pom-root.version>
     <common-annotation.version>2.3.1</common-annotation.version>
-    <common-java.version>4.15.0</common-java.version>
+    <common-java.version>4.15.1</common-java.version>
     <common-random.version>4.3.1</common-random.version>
     <common-unit-test.version>4.4.0</common-unit-test.version>
     <common-integration-test.version>4.4.3</common-integration-test.version>

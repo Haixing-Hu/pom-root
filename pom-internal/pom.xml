@@ -38,7 +38,7 @@
     <common-mime.version>2.2.0</common-mime.version>
     <common-model.version>4.16.0</common-model.version>
     <common-mybatis.version>0.3.0</common-mybatis.version>
-    <common-random.version>4.4.0</common-random.version>
+    <common-random.version>4.5.0</common-random.version>
     <common-service.version>1.11.0</common-service.version>
     <common-spring.version>0.3.0</common-spring.version>
     <common-tool.version>2.4.0</common-tool.version>

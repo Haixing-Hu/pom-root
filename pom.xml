@@ -185,7 +185,7 @@
   <properties>
     <!-- General configuration constants -->
     <jdk.version>17</jdk.version>
-    <jdk.javadoc.link>https://docs.oracle.com/javase/${jdk.version}/docs/api/</jdk.javadoc.link>
+    <jdk.javadoc.link>https://docs.oracle.com/en/java/javase/${jdk.version}/docs/api/</jdk.javadoc.link>
     <maven.compiler.source>${jdk.version}</maven.compiler.source>
     <maven.compiler.target>${jdk.version}</maven.compiler.target>
     <maven.compiler.release>${jdk.version}</maven.compiler.release>

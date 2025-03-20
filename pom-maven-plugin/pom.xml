@@ -172,6 +172,9 @@
               <link>${jdk.javadoc.link}</link>
             </links>
             <show>private</show>  <!-- display all privite members -->
+            <!-- 只为 src/main/java 中的代码生成文档 -->
+            <sourcepath>${project.basedir}/src/main/java</sourcepath>
+            <testSourcepath></testSourcepath>
           </configuration>
           <executions>
             <execution>

@@ -40,6 +40,7 @@
     <micrometer.version>1.12.2</micrometer.version>
     <picocli.version>4.7.6</picocli.version>
     <jsonwebtoken.version>0.12.6</jsonwebtoken.version>
+    <reactor.version>3.8.0-M1</reactor.version>
   </properties>
 
   <dependencyManagement>
@@ -176,6 +177,13 @@
         <groupId>io.jsonwebtoken</groupId>
         <artifactId>jjwt-jackson</artifactId>
         <version>${jsonwebtoken.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.projectreactor</groupId>
+        <artifactId>reactor-core</artifactId>
+        <version>${reactor.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>

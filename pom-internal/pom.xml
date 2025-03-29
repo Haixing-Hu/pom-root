@@ -34,7 +34,7 @@
     <common-error.version>1.5.1</common-error.version>
     <common-id.version>2.5.0</common-id.version>
     <common-integration-test.version>4.5.0</common-integration-test.version>
-    <common-java.version>4.27.0</common-java.version>
+    <common-java.version>4.28.0</common-java.version>
     <common-mime.version>2.2.0</common-mime.version>
     <common-model.version>4.19.0</common-model.version>
     <common-mybatis.version>0.3.0</common-mybatis.version>

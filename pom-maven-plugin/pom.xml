@@ -170,11 +170,26 @@
             <source>${jdk.version}</source>
             <links>
               <link>${jdk.javadoc.link}</link>
+              <link>https://dev.qubit.ltd/javadoc/common-annotation</link>
+              <link>https://dev.qubit.ltd/javadoc/common-aspect</link>
+              <link>https://dev.qubit.ltd/javadoc/common-core</link>
+              <link>https://dev.qubit.ltd/javadoc/common-dao</link>
+              <link>https://dev.qubit.ltd/javadoc/common-error</link>
+              <link>https://dev.qubit.ltd/javadoc/common-id</link>
+              <link>https://dev.qubit.ltd/javadoc/common-integration-test</link>
+              <link>https://dev.qubit.ltd/javadoc/common-java</link>
+              <link>https://dev.qubit.ltd/javadoc/common-mime</link>
+              <link>https://dev.qubit.ltd/javadoc/common-model</link>
+              <link>https://dev.qubit.ltd/javadoc/common-mybatis</link>
+              <link>https://dev.qubit.ltd/javadoc/common-random</link>
+              <link>https://dev.qubit.ltd/javadoc/common-service</link>
+              <link>https://dev.qubit.ltd/javadoc/common-spring</link>
+              <link>https://dev.qubit.ltd/javadoc/common-unit-test</link>
+              <link>https://dev.qubit.ltd/javadoc/common-validator</link>
             </links>
             <show>private</show>  <!-- display all privite members -->
             <!-- 只为 src/main/java 中的代码生成文档 -->
             <sourcepath>${project.basedir}/src/main/java</sourcepath>
-            <testSourcepath></testSourcepath>
           </configuration>
           <executions>
             <execution>

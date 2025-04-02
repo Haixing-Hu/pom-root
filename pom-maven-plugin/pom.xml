@@ -186,6 +186,10 @@
               <link>https://dev.qubit.ltd/javadoc/common-spring</link>
               <link>https://dev.qubit.ltd/javadoc/common-unit-test</link>
               <link>https://dev.qubit.ltd/javadoc/common-validator</link>
+              <link>https://dev.qubit.ltd/javadoc/llmsdk-core</link>
+              <link>https://dev.qubit.ltd/javadoc/llmsdk-openai</link>
+              <link>https://dev.qubit.ltd/javadoc/llmsdk-zhipu</link>
+              <link>https://dev.qubit.ltd/javadoc/llmsdk-siliconflow</link>
             </links>
             <show>private</show>  <!-- display all privite members -->
             <!-- 只为 src/main/java 中的代码生成文档 -->

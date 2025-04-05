@@ -32,6 +32,7 @@
     <httpmime4.version>4.5.14</httpmime4.version>
     <okhttp3.version>4.12.0</okhttp3.version>
     <retrofit.version>2.11.0</retrofit.version>
+    <retrofit2-reactor-adapter.version>2.1.0</retrofit2-reactor-adapter.version>
   </properties>
 
   <dependencyManagement>
@@ -330,6 +331,13 @@
         <groupId>com.squareup.retrofit2</groupId>
         <artifactId>converter-jackson</artifactId>
         <version>${retrofit.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.jakewharton.retrofit</groupId>
+        <artifactId>retrofit2-reactor-adapter</artifactId>
+        <version>${retrofit2-reactor-adapter.version}</version>
         <type>jar</type>
         <scope>compile</scope>
       </dependency>

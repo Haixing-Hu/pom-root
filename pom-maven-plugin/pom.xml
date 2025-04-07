@@ -95,7 +95,7 @@
               <configuration>
                 <rules>
                   <requireMavenVersion>
-                    <version>x >= 3.5.0</version>
+                    <version>x &gt;= 3.5.0</version>
                   </requireMavenVersion>
                 </rules>
               </configuration>
@@ -194,6 +194,17 @@
             <show>private</show>  <!-- display all privite members -->
             <!-- 只为 src/main/java 中的代码生成文档 -->
             <sourcepath>${project.basedir}/src/main/java</sourcepath>
+            <!-- 增加自定义的 js，用于解决 CJK 文字折行多加空格的问题 -->
+            <additionalJOptions>
+              <additionalJOption>--allow-script-in-comments</additionalJOption>
+              <additionalJOption>-header</additionalJOption>
+              <additionalJOption>
+                <![CDATA[
+                <script src="https://cdn.jsdelivr.net/npm/fix-cjk-linebreak@2.0.0/dist/fix-cjk-linebreak.umd.min.js"></script>
+                <script>fixCJKLinebreak.autoFix();</script>
+                ]]>
+              </additionalJOption>
+            </additionalJOptions>
           </configuration>
           <executions>
             <execution>

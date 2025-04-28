@@ -94,6 +94,7 @@
       <properties>
         <build.suffix>-SNAPSHOT</build.suffix>
         <environment>dev</environment>
+        <maven.compiler.options>-g</maven.compiler.options>
       </properties>
       <activation>
         <activeByDefault>true</activeByDefault>
@@ -104,6 +105,7 @@
       <properties>
         <build.suffix>-SNAPSHOT</build.suffix>
         <environment>stage</environment>
+        <maven.compiler.options>-g</maven.compiler.options>
       </properties>
     </profile>
     <profile>
@@ -111,6 +113,7 @@
       <properties>
         <build.suffix>-SNAPSHOT</build.suffix>
         <environment>test</environment>
+        <maven.compiler.options>-g</maven.compiler.options>
       </properties>
     </profile>
     <profile>
@@ -118,6 +121,7 @@
       <properties>
         <build.suffix></build.suffix>    <!-- no -SNAPSHOT suffix for release build -->
         <environment>prod</environment>
+        <maven.compiler.options>-g:none</maven.compiler.options>
       </properties>
     </profile>
     <profile>
@@ -125,6 +129,7 @@
       <properties>
         <build.suffix></build.suffix>    <!-- no -SNAPSHOT suffix for release build -->
         <environment>prod</environment>
+        <maven.compiler.options>-g:none</maven.compiler.options>
       </properties>
     </profile>
     <!-- Disable the javadoc lint for JDK8+ -->

@@ -17,13 +17,15 @@
     <artifactId>pom-meta</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>bom-image-io</artifactId>
+  <artifactId>bom-image</artifactId>
   <packaging>pom</packaging>
   <version>1.0.0-SNAPSHOT</version>
-  <name>BOM of ImageIO</name>
+  <name>BOM of Image Libraries</name>
 
   <properties>
     <imageio.version>3.12.0</imageio.version>
+    <pdfbox.version>3.0.4</pdfbox.version>
+    <openpnp-opencv.version>4.9.0-0</openpnp-opencv.version>
   </properties>
 
   <dependencyManagement>
@@ -126,6 +128,20 @@
         <classifier>jakarta</classifier>
         <type>jar</type>
         <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.pdfbox</groupId>
+        <artifactId>pdfbox</artifactId>
+        <version>${pdfbox.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.openpnp</groupId>
+        <artifactId>opencv</artifactId>
+        <version>${openpnp-opencv.version}</version>
+        <type>jar</type>
+        <scope>compile</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>

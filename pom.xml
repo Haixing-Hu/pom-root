@@ -219,7 +219,7 @@
     <module>bom-database-driver</module>            <!-- inherit from pom-meta -->
     <module>bom-html</module>                       <!-- inherit from pom-meta -->
     <module>bom-http</module>                       <!-- inherit from pom-meta -->
-    <module>bom-image-io</module>                   <!-- inherit from pom-meta -->
+    <module>bom-image</module>                      <!-- inherit from pom-meta -->
     <module>bom-jaxb</module>                       <!-- inherit from pom-meta -->
     <module>bom-json</module>                       <!-- inherit from pom-meta -->
     <module>bom-lang</module>                       <!-- inherit from pom-meta -->

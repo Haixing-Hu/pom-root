@@ -24,23 +24,23 @@
 
   <properties>
 <!--    <guava-variant>jre</guava-variant>  &lt;!&ndash; 可根据情况选择 jre 或 android &ndash;&gt;-->
-    <guava.version>33.0.0-jre</guava.version>
-    <protobuf.version>4.0.0-rc-2</protobuf.version>
+    <guava.version>33.4.8-jre</guava.version>
+    <protobuf.version>4.31.0-RC1</protobuf.version>
     <jgrapht.version>1.5.2</jgrapht.version>  <!-- This is the latest version support JDK 8 -->
     <failsafe.version>3.3.2</failsafe.version>
     <argparse4j.version>0.9.0</argparse4j.version>
     <cal10n.version>0.8.1</cal10n.version>
     <jchardet.version>1.0</jchardet.version>
     <juniversalchardet.version>1.0.3</juniversalchardet.version>
-    <quartz.version>2.5.0-rc1</quartz.version>
-    <ognl.version>3.4.2</ognl.version>
+    <quartz.version>2.5.0</quartz.version>
+    <ognl.version>3.4.7</ognl.version>
     <ziplet.version>2.4.1</ziplet.version>
-    <progressbar.version>0.10.0</progressbar.version>
+    <progressbar.version>0.10.1</progressbar.version>
     <unbescape.version>1.1.6.RELEASE</unbescape.version>
-    <micrometer.version>1.12.2</micrometer.version>
-    <picocli.version>4.7.6</picocli.version>
+    <micrometer.version>1.15.0-RC1</micrometer.version>
+    <picocli.version>4.7.7</picocli.version>
     <jsonwebtoken.version>0.12.6</jsonwebtoken.version>
-    <reactor.version>3.8.0-M1</reactor.version>
+    <reactor.version>3.8.0-M2</reactor.version>
   </properties>
 
   <dependencyManagement>

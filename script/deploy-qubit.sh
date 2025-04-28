@@ -56,7 +56,7 @@ for module in $(cat ${MODULE_LIST_FILE}); do
         git pull;
         echo "Deploying snapshot version of ${module} to maven.qubit.ltd ...";
         LOG_FILE="${LOG_DIR}/${module_name}.mvn-deploy.qubit.snapshot.log";
-        if mvn clean deploy -DskipTests &> "${LOG_FILE}"; then
+        if mvn clean deploy -DskipTests -Djavadoc -Dsource &> "${LOG_FILE}"; then
             echo "Deploy snapshot version of ${module} to maven.qubit.ltd successfully.";
         else
             echo "Deploy snapshot version of ${module} to maven.qubit.ltd failed.";

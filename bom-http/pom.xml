@@ -23,14 +23,14 @@
   <name>BOM of HTTP components</name>
 
   <properties>
-    <httpclient5.version>5.3</httpclient5.version>
-    <httpcore5.version>5.2.4</httpcore5.version>
+    <httpclient5.version>5.5-alpha1</httpclient5.version>
+    <httpcore5.version>5.3.4</httpcore5.version>
 
     <httpclient4.version>4.5.14</httpclient4.version>
     <httpcore4.version>4.4.16</httpcore4.version>
     <httpasyncclient4.version>4.1.5</httpasyncclient4.version>
     <httpmime4.version>4.5.14</httpmime4.version>
-    <okhttp3.version>4.12.0</okhttp3.version>
+    <okhttp3.version>5.0.0-alpha.14</okhttp3.version>
     <retrofit.version>2.11.0</retrofit.version>
     <retrofit2-reactor-adapter.version>2.1.0</retrofit2-reactor-adapter.version>
   </properties>

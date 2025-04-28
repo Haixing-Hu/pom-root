@@ -23,9 +23,9 @@
   <name>BOM of AI</name>
 
   <properties>
-    <javacv.version>1.5.7</javacv.version>
-    <tess4j.version>4.5.4</tess4j.version>
-    <langchain4j.version>0.31.0</langchain4j.version>
+    <javacv.version>1.5.11</javacv.version>
+    <tess4j.version>5.15.0</tess4j.version>
+    <langchain4j.version>0.36.2</langchain4j.version>
   </properties>
 
   <dependencyManagement>

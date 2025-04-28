@@ -27,7 +27,7 @@
     <htmlcleaner.version>2.29</htmlcleaner.version>
     <tagsoup.version>1.2.1</tagsoup.version>
     <rhino.version>1.7R2</rhino.version>
-    <tika.version>3.0.0-BETA</tika.version>
+    <tika.version>3.1.0</tika.version>
   </properties>
 
   <dependencyManagement>

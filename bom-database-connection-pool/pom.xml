@@ -23,10 +23,10 @@
   <name>BOM of Database Connection Pools</name>
 
   <properties>
-    <c3p0.version>0.9.5.5</c3p0.version>
-    <druid.version>1.2.21</druid.version>
+    <c3p0.version>0.11.0-pre2</c3p0.version>
+    <druid.version>1.2.24</druid.version>
     <proxool.version>0.8.3</proxool.version>
-    <hikaricp.version>5.1.0</hikaricp.version>
+    <hikaricp.version>6.3.0</hikaricp.version>
   </properties>
 
   <dependencyManagement>

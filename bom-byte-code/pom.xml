@@ -23,9 +23,9 @@
   <name>BOM of Byte Code</name>
 
   <properties>
-    <asm.version>9.6</asm.version>
+    <asm.version>9.8</asm.version>
     <cglib.version>3.3.0</cglib.version>
-    <bytebuddy.version>1.14.11</bytebuddy.version>
+    <bytebuddy.version>1.17.5</bytebuddy.version>
     <javassist.version>3.12.1.GA</javassist.version>
   </properties>
 

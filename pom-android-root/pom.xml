@@ -40,12 +40,12 @@
   </repositories>
 
   <properties>
-    <android.version>8.0.0_r2</android.version>
+    <android.version>14_r2</android.version>
     <android.sdk.version>26</android.sdk.version>
-    <androidx-annotation.version>1.7.1</androidx-annotation.version>
-    <androidx-core.version>1.12.0</androidx-core.version>
-    <androidx-appcompat.version>1.6.0</androidx-appcompat.version>
-    <android.lifecycle-common.version>2.5.1</android.lifecycle-common.version>
+    <androidx-annotation.version>1.9.1</androidx-annotation.version>
+    <androidx-core.version>1.16.0</androidx-core.version>
+    <androidx-appcompat.version>1.7.0</androidx-appcompat.version>
+    <android.lifecycle-common.version>2.9.0-beta01</android.lifecycle-common.version>
     <android-maven-plugin.version>4.6.0</android-maven-plugin.version>
     <javax-jaxb.version>2.3.1</javax-jaxb.version>
   </properties>

@@ -25,11 +25,11 @@
   <properties>
     <javax-jaxb-api.version>2.4.0-b180830.0359</javax-jaxb-api.version>
     <javax-activation-api.version>1.2.0</javax-activation-api.version>
-    <jakarta-jaxb-api.version>4.0.1</jakarta-jaxb-api.version>
-    <jakarta-activation-api.version>2.1.2</jakarta-activation-api.version>
-    <sun-jaxb-runtime.version>4.0.4</sun-jaxb-runtime.version>
+    <jakarta-jaxb-api.version>4.0.2</jakarta-jaxb-api.version>
+    <jakarta-activation-api.version>2.1.3</jakarta-activation-api.version>
+    <sun-jaxb-runtime.version>4.0.5</sun-jaxb-runtime.version>
     <sun-activation.version>2.0.1</sun-activation.version>
-    <glassfish-javax-jaxb-runtime.version>4.0.4</glassfish-javax-jaxb-runtime.version>
+    <glassfish-javax-jaxb-runtime.version>4.0.5</glassfish-javax-jaxb-runtime.version>
   </properties>
 
   <dependencyManagement>

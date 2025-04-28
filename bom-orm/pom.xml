@@ -23,17 +23,17 @@
   <name>BOM of ORM</name>
 
   <properties>
-    <jakarta-persistence-api.version>3.2.0-M1</jakarta-persistence-api.version>
+    <jakarta-persistence-api.version>3.2.0</jakarta-persistence-api.version>
     <javax-persistence-api.version>2.2</javax-persistence-api.version>
-    <eclipselink.version>4.0.2</eclipselink.version>
-    <apache-openjpa.version>3.2.2</apache-openjpa.version>
-    <hibernate.version>6.4.2.Final</hibernate.version>
+    <eclipselink.version>5.0.0-B07</eclipselink.version>
+    <apache-openjpa.version>4.1.0</apache-openjpa.version>
+    <hibernate.version>7.0.0.Beta5</hibernate.version>
     <hibernate-search.version>5.11.12.Final</hibernate-search.version>
-    <mybatis.version>3.5.15</mybatis.version>
-    <mybatis-spring.version>3.0.3</mybatis-spring.version>
+    <mybatis.version>3.5.19</mybatis.version>
+    <mybatis-spring.version>3.0.4</mybatis-spring.version>
     <mybatis-typehandlers-jsr310.version>1.0.2</mybatis-typehandlers-jsr310.version>
-    <mybatis-guice.version>3.18</mybatis-guice.version>
-    <mybatis-migrations.version>3.3.11</mybatis-migrations.version>
+    <mybatis-guice.version>4.0.0</mybatis-guice.version>
+    <mybatis-migrations.version>3.4.0</mybatis-migrations.version>
   </properties>
 
   <dependencyManagement>

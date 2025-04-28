@@ -23,8 +23,8 @@
   <name>BOM of Java Language</name>
 
   <properties>
-    <objenesis.version>3.3</objenesis.version>
-    <classgraph.version>4.8.165</classgraph.version>
+    <objenesis.version>3.4</objenesis.version>
+    <classgraph.version>4.8.179</classgraph.version>
     <cloning.version>1.9.12</cloning.version>
     <typetools.version>0.6.3</typetools.version>
     <mutability-detector.version>0.10.6</mutability-detector.version>

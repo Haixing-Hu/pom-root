@@ -28,18 +28,18 @@
     <pom-root.version>3.2.0</pom-root.version>
     <common-annotation.version>2.4.0</common-annotation.version>
     <common-aspect.version>1.7.0</common-aspect.version>
-    <common-core.version>4.24.0</common-core.version>
-    <common-dao.version>1.9.1</common-dao.version>
-    <common-database.version>4.8.0</common-database.version>
+    <common-core.version>4.27.0</common-core.version>
+    <common-dao.version>1.11.1</common-dao.version>
+    <common-database.version>4.9.0</common-database.version>
     <common-error.version>1.5.1</common-error.version>
     <common-id.version>2.5.0</common-id.version>
-    <common-integration-test.version>4.5.0</common-integration-test.version>
-    <common-java.version>4.31.0</common-java.version>
-    <common-mime.version>2.3.0</common-mime.version>
-    <common-model.version>4.19.0</common-model.version>
+    <common-integration-test.version>4.7.0</common-integration-test.version>
+    <common-java.version>4.32.0</common-java.version>
+    <common-mime.version>2.4.0</common-mime.version>
+    <common-model.version>4.23.0</common-model.version>
     <common-mybatis.version>0.3.0</common-mybatis.version>
-    <common-random.version>4.5.0</common-random.version>
-    <common-service.version>1.14.0</common-service.version>
+    <common-random.version>4.6.0</common-random.version>
+    <common-service.version>1.16.0</common-service.version>
     <common-spring.version>0.3.0</common-spring.version>
     <common-tool.version>2.4.0</common-tool.version>
     <common-unit-test.version>4.5.0</common-unit-test.version>

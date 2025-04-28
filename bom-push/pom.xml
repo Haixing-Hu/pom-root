@@ -24,7 +24,7 @@
 
   <properties>
     <apns.version>1.0.0.Beta6</apns.version>
-    <jpush.version>3.7.3</jpush.version>
+    <jpush.version>3.7.7</jpush.version>
   </properties>
 
   <dependencyManagement>

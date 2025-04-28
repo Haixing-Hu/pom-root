@@ -25,12 +25,12 @@
   <properties>
     <mysql-connector-j.version>9.2.0</mysql-connector-j.version>
     <mysql-connector-mxj.version>5.0.12</mysql-connector-mxj.version>
-    <ms-sqlserver.version>12.5.0.jre11-preview</ms-sqlserver.version>
-    <ojdbc10.version>19.21.0.0</ojdbc10.version>
+    <ms-sqlserver.version>12.10.0.jre11</ms-sqlserver.version>
+    <ojdbc10.version>19.26.0.0</ojdbc10.version>
     <db2jcc.version>db2jcc4</db2jcc.version>
-    <h2.version>2.2.224</h2.version>
-    <hsqldb.version>2.7.2</hsqldb.version>
-    <mariadb4j.version>3.0.1</mariadb4j.version>
+    <h2.version>2.3.232</h2.version>
+    <hsqldb.version>2.7.4</hsqldb.version>
+    <mariadb4j.version>3.2.0</mariadb4j.version>
     <sleepycat-je.version>18.3.12</sleepycat-je.version>
     <derby.version>10.17.1.0</derby.version>
   </properties>

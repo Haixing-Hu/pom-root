@@ -23,7 +23,7 @@
   <name>BOM of Security</name>
 
   <properties>
-    <shiro.version>2.0.0-alpha-4</shiro.version>
+    <shiro.version>2.0.4</shiro.version>
   </properties>
 
   <dependencyManagement>

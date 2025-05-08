@@ -28,7 +28,7 @@
     <springfox-swagger2.version>3.0.0</springfox-swagger2.version>
     <checkstyle.version>10.23.0</checkstyle.version>
     <spotbugs.version>4.9.3</spotbugs.version>
-    <flyway.version>11.7.2</flyway.version>   <!-- 不要升级！flyway > 7.15.0 不再支持 MySQL 5.7 -->
+    <flyway.version>7.15.0</flyway.version>   <!-- 不要升级！flyway > 7.15.0 不再支持 MySQL 5.7 -->
     <tomcat.version>11.0.6</tomcat.version>
   </properties>
 

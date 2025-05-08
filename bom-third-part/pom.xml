@@ -25,7 +25,6 @@
   <properties>
     <yunpian.version>1.2.7</yunpian.version>
     <miaoxin.version>1.0.0</miaoxin.version>
-    <aliyun-sdk-oss.version>3.18.1</aliyun-sdk-oss.version>
     <foxinmy-weixin4j-mp.version>1.10.2</foxinmy-weixin4j-mp.version>
     <foxinmy-weixin4j-qy.version>1.10.2</foxinmy-weixin4j-qy.version>
     <foxinmy-weixin4j-server.version>1.10.2</foxinmy-weixin4j-server.version>
@@ -88,20 +87,6 @@
         <version>${foxinmy-easemob4j.version}</version>
         <type>jar</type>
         <scope>compile</scope>
-      </dependency>
-      <!-- 阿里云 OSS -->
-      <dependency>
-        <groupId>com.aliyun.oss</groupId>
-        <artifactId>aliyun-sdk-oss</artifactId>
-        <version>${aliyun-sdk-oss.version}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-        <exclusions>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
       </dependency>
     </dependencies>
   </dependencyManagement>

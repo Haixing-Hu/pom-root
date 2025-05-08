@@ -218,6 +218,7 @@
     <module>bom-apache-commons</module>             <!-- inherit from pom-meta -->
     <module>bom-byte-code</module>                  <!-- inherit from pom-meta -->
     <module>bom-cache</module>                      <!-- inherit from pom-meta -->
+    <module>bom-cloud</module>                      <!-- inherit from pom-meta -->
     <module>bom-container-provided</module>         <!-- inherit from pom-meta -->
     <module>bom-crawler</module>                    <!-- inherit from pom-meta -->
     <module>bom-database-connection-pool</module>   <!-- inherit from pom-meta -->

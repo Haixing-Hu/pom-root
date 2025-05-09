@@ -69,6 +69,13 @@
       </dependency>
       <dependency>
         <groupId>ltd.qubit</groupId>
+        <artifactId>bom-cloud</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>ltd.qubit</groupId>
         <artifactId>bom-container-provided</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <type>pom</type>

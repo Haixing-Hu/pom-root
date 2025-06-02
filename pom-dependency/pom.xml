@@ -118,7 +118,7 @@
       </dependency>
       <dependency>
         <groupId>ltd.qubit</groupId>
-        <artifactId>bom-image-io</artifactId>
+        <artifactId>bom-image</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
@@ -195,13 +195,6 @@
       </dependency>
       <dependency>
         <groupId>ltd.qubit</groupId>
-        <artifactId>bom-rule-engine</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>ltd.qubit</groupId>
         <artifactId>bom-orm</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <type>pom</type>
@@ -210,6 +203,13 @@
       <dependency>
         <groupId>ltd.qubit</groupId>
         <artifactId>bom-push</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>ltd.qubit</groupId>
+        <artifactId>bom-rule-engine</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>

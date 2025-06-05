@@ -143,14 +143,13 @@
           <configuration>
             <source>${jdk.version}</source>
             <target>${jdk.version}</target>
-            <!-- <compilerVersion>${jdk.version}</compilerVersion>-->  <!-- 此选项已被弃用 -->
             <encoding>${project.encoding}</encoding>
-            <!-- <optimize>true</optimize> --> <!-- 此选项已被弃用 -->
             <compilerArgs>
-              <arg>-Xlint:all</arg>             <!-- 打开所有代码警告-->
-              <arg>-Xdoclint:none</arg>         <!-- 关闭所有javadoc警告 -->
-              <arg>-parameters</arg>            <!-- 生成用于反射的方法参数的元数据 -->
-              <arg>${maven.compiler.args}</arg> <!-- 其他额外的参数 -->
+              <arg>-Xlint:all</arg>                     <!-- 打开所有代码警告-->
+              <arg>-Xlint:-dangling-doc-comments</arg>  <!-- 仅关闭悬挂文档注释警告 -->
+              <arg>-Xdoclint:none</arg>                 <!-- 关闭所有javadoc警告 -->
+              <arg>-parameters</arg>                    <!-- 生成用于反射的方法参数的元数据 -->
+              <arg>${maven.compiler.args}</arg>         <!-- 其他额外的参数 -->
             </compilerArgs>
           </configuration>
         </plugin>
@@ -172,6 +171,8 @@
             <source>${jdk.version}</source>
             <links>
               <link>${jdk.javadoc.link}</link>
+              <link>https://jakarta.ee/specifications/servlet/${jakarta.version}/apidocs/</link>
+              <link>https://docs.spring.io/spring-framework/docs/current/javadoc-api/</link>
               <link>https://dev.qubit.ltd/javadoc/common-annotation</link>
               <link>https://dev.qubit.ltd/javadoc/common-aspect</link>
               <link>https://dev.qubit.ltd/javadoc/common-core</link>

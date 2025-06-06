@@ -132,28 +132,6 @@
         <maven.compiler.options>-g:none</maven.compiler.options>
       </properties>
     </profile>
-    <!-- Disable the javadoc lint for JDK8+ -->
-    <profile>
-      <id>disable-java8-doclint</id>
-      <activation>
-        <jdk>[1.8,)</jdk>
-      </activation>
-      <properties>
-        <additionalparam>-Xdoclint:none</additionalparam>
-      </properties>
-    </profile>
-    <!-- JDK9+: generate metadata for reflection of method parameters -->
-    <profile>
-      <id>jdk9+</id>
-      <activation>
-        <jdk>[9,)</jdk>
-      </activation>
-      <properties>
-        <maven.compiler.release>${jdk.version}</maven.compiler.release>
-        <!-- generate metadata for reflection of method parameters -->
-        <maven.compiler.args>-parameters</maven.compiler.args>
-      </properties>
-    </profile>
     <!-- JDK 9-16.x could add the illegal-access JVM option -->
     <profile>
       <id>jdk9-16</id>
@@ -163,6 +141,16 @@
       <properties>
         <jvm.options>--illegal-access=permit --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED</jvm.options>
         <test.jvm.options>--illegal-access=permit --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED</test.jvm.options>
+      </properties>
+    </profile>
+    <!-- JDK 23+ could add the -Xlint:-dangling-doc-comments JVM option -->
+    <profile>
+      <id>jdk23+</id>
+      <activation>
+        <jdk>[23,)</jdk>
+      </activation>
+      <properties>
+        <maven.compiler.args>-Xlint:-dangling-doc-comments</maven.compiler.args> <!-- 关闭悬挂文档注释警告 -->
       </properties>
     </profile>
     <!-- deploy to njzhyl repository -->

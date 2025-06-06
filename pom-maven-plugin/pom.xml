@@ -146,7 +146,6 @@
             <encoding>${project.encoding}</encoding>
             <compilerArgs>
               <arg>-Xlint:all</arg>                     <!-- 打开所有代码警告-->
-              <arg>-Xlint:-dangling-doc-comments</arg>  <!-- 仅关闭悬挂文档注释警告 -->
               <arg>-Xdoclint:none</arg>                 <!-- 关闭所有javadoc警告 -->
               <arg>-parameters</arg>                    <!-- 生成用于反射的方法参数的元数据 -->
               <arg>${maven.compiler.args}</arg>         <!-- 其他额外的参数 -->
@@ -190,9 +189,10 @@
               <link>https://dev.qubit.ltd/javadoc/common-unit-test</link>
               <link>https://dev.qubit.ltd/javadoc/common-validator</link>
               <link>https://dev.qubit.ltd/javadoc/llmsdk-core</link>
-              <link>https://dev.qubit.ltd/javadoc/llmsdk-openai</link>
-              <link>https://dev.qubit.ltd/javadoc/llmsdk-zhipu</link>
-              <link>https://dev.qubit.ltd/javadoc/llmsdk-siliconflow</link>
+              <link>https://dev.qubit.ltd/javadoc/llmsdk-provider-openai</link>
+              <link>https://dev.qubit.ltd/javadoc/llmsdk-provider-zhipu</link>
+              <link>https://dev.qubit.ltd/javadoc/llmsdk-provider-siliconflow</link>
+              <link>https://dev.qubit.ltd/javadoc/llmsdk-provider-openrouter</link>
             </links>
             <show>private</show>  <!-- display all privite members -->
             <!-- 只为 src/main/java 中的代码生成文档 -->

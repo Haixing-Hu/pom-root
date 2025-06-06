@@ -53,39 +53,6 @@
     <database-tools.version>2.0.1</database-tools.version>
     <source-code-extractor.version>2.0.1</source-code-extractor.version>
 
-    <sbpt-model.version>2.0.1</sbpt-model.version>
-    <sbpt-his-java-sdk.version>2.0.0</sbpt-his-java-sdk.version>
-    <sbpt-insurance-java-sdk.version>1.0.0</sbpt-insurance-java-sdk.version>
-    <sbpt-data-viewer.version>2.0.0</sbpt-data-viewer.version>
-    <jsatcm-his.version>2.0.0</jsatcm-his.version>
-    <njxkyy-his.version>2.0.0</njxkyy-his.version>
-
-    <trade-model.version>1.0.0</trade-model.version>
-    <trade-core.version>1.0.0</trade-core.version>
-    <trade-platform.version>1.0.0</trade-platform.version>
-    <trade-admin.version>1.0.0</trade-admin.version>
-    <order-model.version>1.0.0</order-model.version>
-    <order-core.version>1.0.0</order-core.version>
-    <order-platform.version>1.0.0</order-platform.version>
-    <order-admin.version>1.0.0</order-admin.version>
-    <payment-model.version>1.0.0</payment-model.version>
-    <payment-core.version>1.0.0</payment-core.version>
-    <payment-platform.version>1.0.0</payment-platform.version>
-    <payment-admin.version>1.0.0</payment-admin.version>
-    <settlement-model.version>1.0.0</settlement-model.version>
-    <settlement-core.version>1.0.0</settlement-core.version>
-    <settlement-platform.version>1.0.0</settlement-platform.version>
-    <settlement-admin.version>1.0.0</settlement-admin.version>
-
-    <insurance-model.version>2.0.0</insurance-model.version>
-    <insurance-core.version>2.0.0</insurance-core.version>
-    <insurance-admin.version>2.0.0</insurance-admin.version>
-    <insurance-platform.version>2.0.0</insurance-platform.version>
-    <insurance-monitor.version>2.0.0</insurance-monitor.version>
-    <insurance-modifier.version>2.0.0</insurance-modifier.version>
-    <insurance-exchange.version>2.0.0</insurance-exchange.version>
-
-
     <android-common.version>1.0.0</android-common.version>
     <android-config-provider.version>1.0.0</android-config-provider.version>
   </properties>

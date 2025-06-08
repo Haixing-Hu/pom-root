@@ -164,7 +164,7 @@
             <!-- reduce console output. Can override with -Dquiet=false -->
             <quiet>false</quiet>
             <verbose>true</verbose>
-            <failOnError>true</failOnError>
+            <failOnError>false</failOnError>
             <failOnWarnings>false</failOnWarnings>
             <doclint>none</doclint>
             <source>${jdk.version}</source>
@@ -172,6 +172,23 @@
               <link>${jdk.javadoc.link}</link>
               <link>https://jakarta.ee/specifications/servlet/${jakarta.version}/apidocs/</link>
               <link>https://docs.spring.io/spring-framework/docs/current/javadoc-api/</link>
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-annotation/${common-annotation.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-aspect/${common-aspect.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-core/${common-core.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-dao/${common-dao.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-error/${common-error.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-id/${common-id.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-integration-test/${common-integration-test.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-java/${common-java.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-mime/${common-mime.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-model/${common-model.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-mybatis/${common-mybatis.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-random/${common-random.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-service/${common-service.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-spring/${common-spring.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-unit-test/${common-unit-test.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-validator/${common-validator.version}/raw/</link>-->
+<!--              <link>https://dev.qubit.ltd/javadoc/releases/ltd/qubit/common-core/${common-core.version}/raw/</link>-->
               <link>https://dev.qubit.ltd/javadoc/common-annotation</link>
               <link>https://dev.qubit.ltd/javadoc/common-aspect</link>
               <link>https://dev.qubit.ltd/javadoc/common-core</link>

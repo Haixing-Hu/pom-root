@@ -28,15 +28,15 @@
     <pom-root.version>3.2.0</pom-root.version>
     <common-annotation.version>2.4.0</common-annotation.version>
     <common-aspect.version>1.7.1</common-aspect.version>
-    <common-core.version>4.30.2</common-core.version>
+    <common-core.version>4.30.3</common-core.version>
     <common-dao.version>1.11.2</common-dao.version>
-    <common-database.version>4.9.0</common-database.version>
+    <common-database.version>4.9.1</common-database.version>
     <common-error.version>1.5.1</common-error.version>
     <common-id.version>2.5.0</common-id.version>
     <common-integration-test.version>4.7.2</common-integration-test.version>
     <common-java.version>4.35.2</common-java.version>
     <common-mime.version>2.5.0</common-mime.version>
-    <common-model.version>4.23.3</common-model.version>
+    <common-model.version>4.23.4</common-model.version>
     <common-mybatis.version>0.3.0</common-mybatis.version>
     <common-random.version>4.6.0</common-random.version>
     <common-service.version>1.17.0</common-service.version>
